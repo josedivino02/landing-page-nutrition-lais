@@ -13,13 +13,13 @@ export function TopBar() {
   const whatsappLink = formatWhatsAppLink(CONTACT.whatsapp, t('agende-cta'));
 
   return (
-    <div className="bg-brand-700 text-white text-xs">
+    <div className="bg-brand-700 dark:bg-ink-900 text-white dark:text-ink-200 text-xs border-b border-brand-800/30 dark:border-ink-800">
       <div className="container-wide flex items-center justify-between py-1.5 sm:py-2 gap-3">
         {/* Left: contact info (desktop only) */}
         <div className="hidden md:flex items-center gap-6 min-w-0">
           <a
             href={`tel:${CONTACT.phone.replace(/\D/g, '')}`}
-            className="flex items-center gap-1.5 hover:text-brand-100 transition-colors"
+            className="flex items-center gap-1.5 hover:text-brand-100 dark:hover:text-brand-400 transition-colors"
             aria-label={`${t('phone')}: ${formatPhoneDisplay(CONTACT.phone)}`}
           >
             <Phone className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -27,7 +27,7 @@ export function TopBar() {
           </a>
           <a
             href={`mailto:${CONTACT.email}`}
-            className="hidden lg:flex items-center gap-1.5 hover:text-brand-100 transition-colors"
+            className="hidden lg:flex items-center gap-1.5 hover:text-brand-100 dark:hover:text-brand-400 transition-colors"
             aria-label={`${t('email')}: ${CONTACT.email}`}
           >
             <Mail className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -46,7 +46,7 @@ export function TopBar() {
           <Phone className="h-3 w-3 shrink-0" aria-hidden="true" />
           <a
             href={`tel:${CONTACT.phone.replace(/\D/g, '')}`}
-            className="hover:text-brand-100 transition-colors truncate"
+            className="hover:text-brand-100 dark:hover:text-brand-400 transition-colors truncate"
           >
             {formatPhoneDisplay(CONTACT.phone)}
           </a>
@@ -57,12 +57,12 @@ export function TopBar() {
           <ModeToggle compact />
           <ThemeSwitcher compact />
           <LocaleSwitcher compact />
-          <span className="hidden sm:block h-3 w-px bg-white/20" aria-hidden="true" />
+          <span className="hidden sm:block h-3 w-px bg-white/20 dark:bg-ink-700" aria-hidden="true" />
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:text-brand-100 transition-colors hidden sm:inline"
+            className="font-semibold hover:text-brand-100 dark:hover:text-brand-400 transition-colors hidden sm:inline"
             aria-label="WhatsApp"
           >
             {t('agende-cta')} →
