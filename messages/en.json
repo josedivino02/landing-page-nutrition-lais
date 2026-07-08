@@ -438,6 +438,11 @@
   "back-to-top": {
     "label": "Back to top"
   },
+  "not-found": {
+    "title": "Page not found",
+    "description": "Sorry, we couldn't find what you were looking for. Let's go back to the home page?",
+    "cta": "Back to home"
+  },
   "theme-switcher": {
     "label": "Switch color theme",
     "menu-title": "Choose a theme",

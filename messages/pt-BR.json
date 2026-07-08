@@ -438,6 +438,11 @@
   "back-to-top": {
     "label": "Voltar ao topo"
   },
+  "not-found": {
+    "title": "Página não encontrada",
+    "description": "Desculpe, não encontramos o que você procurava. Vamos voltar para a página inicial?",
+    "cta": "Voltar ao início"
+  },
   "theme-switcher": {
     "label": "Trocar tema de cores",
     "menu-title": "Escolha um tema",
