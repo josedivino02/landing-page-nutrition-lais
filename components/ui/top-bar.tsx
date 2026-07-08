@@ -6,6 +6,7 @@ import { CONTACT, ADDRESS } from '@/lib/constants';
 import { formatPhoneDisplay, formatWhatsAppLink } from '@/lib/utils';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import { LocaleSwitcher } from '@/components/ui/locale-switcher';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 export function TopBar() {
   const t = useTranslations('nav');
@@ -52,7 +53,8 @@ export function TopBar() {
         </div>
 
         {/* Right: switchers + CTA */}
-        <div className="flex items-center gap-2 shrink-0 ml-auto">
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0 ml-auto">
+          <ModeToggle compact />
           <ThemeSwitcher compact />
           <LocaleSwitcher compact />
           <span className="hidden sm:block h-3 w-px bg-white/20" aria-hidden="true" />

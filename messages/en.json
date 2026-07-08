@@ -451,6 +451,10 @@
   "locale-switcher": {
     "label": "Switch language"
   },
+  "mode-toggle": {
+    "switch-to-light": "Switch to light mode",
+    "switch-to-dark": "Switch to dark mode"
+  },
   "footer-services": {
     "clinical": "Clinical Nutrition",
     "weight": "Weight Loss",

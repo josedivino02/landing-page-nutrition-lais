@@ -4,7 +4,7 @@
 
 @layer base {
   /* ===========================
-     Default = Verde Natural
+     Default = Verde Natural (Light)
      =========================== */
   :root,
   [data-theme='verde'] {
@@ -43,7 +43,7 @@
   }
 
   /* ===========================
-     Theme: Azul Trust
+     Theme: Azul Trust (Light)
      =========================== */
   [data-theme='azul'] {
     --primary: 221 83% 53%;
@@ -63,7 +63,7 @@
   }
 
   /* ===========================
-     Theme: Cinza Premium
+     Theme: Cinza Premium (Light)
      =========================== */
   [data-theme='cinza'] {
     --primary: 215 25% 27%;
@@ -82,26 +82,72 @@
     --brand-950: 224 71% 4%;
   }
 
-  /* ===========================
-     Dark mode (combined with any theme)
-     =========================== */
+  /* ===============================================
+     Dark Mode (independent of palette)
+     Brand colors get brighter so they hold up on dark
+     =============================================== */
   [data-theme-mode='dark'] {
-    --background: 222 24% 8%;
-    --foreground: 0 0% 98%;
+    --background: 222 24% 7%;
+    --foreground: 0 0% 96%;
     --card: 222 24% 10%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 96%;
     --popover: 222 24% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary-foreground: 0 0% 100%;
+    --popover-foreground: 0 0% 96%;
+    --primary-foreground: 222 24% 8%;
     --secondary: 222 24% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 96%;
     --muted: 222 24% 14%;
     --muted-foreground: 220 9% 65%;
-    --accent-foreground: 222 24% 12%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 222 24% 8%;
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 24% 18%;
     --input: 222 24% 18%;
+
+    /* Brand stays roughly the same so the visual identity holds,
+       but a touch brighter for contrast against the dark surface. */
+    --brand-50: 124 30% 18%;
+    --brand-100: 124 35% 22%;
+    --brand-200: 124 40% 28%;
+    --brand-300: 124 45% 40%;
+    --brand-400: 124 50% 55%;
+    --brand-500: 124 55% 60%;
+    --brand-600: 124 60% 65%;
+    --brand-700: 124 65% 72%;
+    --brand-800: 124 70% 80%;
+    --brand-900: 124 75% 88%;
+    --brand-950: 124 80% 95%;
+  }
+
+  /* Azul in dark mode: brighter blue */
+  [data-theme-mode='dark'][data-theme='azul'] {
+    --brand-50: 217 35% 18%;
+    --brand-100: 217 45% 24%;
+    --brand-200: 217 55% 32%;
+    --brand-300: 217 65% 42%;
+    --brand-400: 217 75% 55%;
+    --brand-500: 217 85% 65%;
+    --brand-600: 217 90% 72%;
+    --brand-700: 217 95% 80%;
+    --brand-800: 217 100% 87%;
+    --brand-900: 217 100% 92%;
+    --brand-950: 217 100% 96%;
+  }
+
+  /* Cinza in dark mode: brighter neutral */
+  [data-theme-mode='dark'][data-theme='cinza'] {
+    --brand-50: 215 15% 16%;
+    --brand-100: 215 18% 22%;
+    --brand-200: 215 20% 30%;
+    --brand-300: 215 20% 42%;
+    --brand-400: 215 18% 55%;
+    --brand-500: 215 15% 65%;
+    --brand-600: 215 12% 75%;
+    --brand-700: 215 10% 82%;
+    --brand-800: 215 8% 88%;
+    --brand-900: 215 6% 93%;
+    --brand-950: 215 4% 96%;
   }
 
   * {
@@ -117,6 +163,9 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   ::selection {
@@ -125,6 +174,160 @@
 
   :focus-visible {
     @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-background;
+  }
+}
+
+/* ===========================================================
+   DARK MODE OVERRIDES
+   These rules remap the most-used Tailwind classes so the
+   existing markup keeps working when dark mode is active.
+   =========================================================== */
+@layer base {
+  [data-theme-mode='dark'] {
+    /* Surfaces */
+    .bg-white {
+      background-color: hsl(var(--card));
+    }
+    .bg-white\/80 {
+      background-color: hsl(var(--card) / 0.85);
+    }
+    .bg-white\/90 {
+      background-color: hsl(var(--card) / 0.95);
+    }
+    .bg-white\/95 {
+      background-color: hsl(var(--card) / 0.95);
+    }
+    .bg-white\/70 {
+      background-color: hsl(var(--card) / 0.7);
+    }
+    .bg-white\/60 {
+      background-color: hsl(var(--card) / 0.6);
+    }
+    .bg-white\/40 {
+      background-color: hsl(var(--card) / 0.4);
+    }
+    .bg-white\/20 {
+      background-color: hsl(var(--card) / 0.2);
+    }
+    .bg-white\/10 {
+      background-color: hsl(var(--card) / 0.1);
+    }
+    .bg-white\/5 {
+      background-color: hsl(var(--card) / 0.05);
+    }
+
+    /* Subtle ink backgrounds */
+    .bg-ink-50 {
+      background-color: hsl(222 24% 12%);
+    }
+    .bg-ink-50\/50 {
+      background-color: hsl(222 24% 12% / 0.5);
+    }
+    .bg-ink-50\/40 {
+      background-color: hsl(222 24% 12% / 0.4);
+    }
+    .bg-ink-50\/30 {
+      background-color: hsl(222 24% 12% / 0.3);
+    }
+    .bg-ink-100 {
+      background-color: hsl(222 24% 14%);
+    }
+    .bg-ink-100\/40 {
+      background-color: hsl(222 24% 14% / 0.4);
+    }
+
+    /* Text colors */
+    .text-ink-900 {
+      color: hsl(0 0% 96%);
+    }
+    .text-ink-800 {
+      color: hsl(0 0% 90%);
+    }
+    .text-ink-700 {
+      color: hsl(0 0% 80%);
+    }
+    .text-ink-600 {
+      color: hsl(0 0% 70%);
+    }
+    .text-ink-500 {
+      color: hsl(0 0% 60%);
+    }
+    .text-ink-400 {
+      color: hsl(0 0% 50%);
+    }
+    .text-ink-300 {
+      color: hsl(0 0% 45%);
+    }
+    .text-ink-200 {
+      color: hsl(0 0% 38%);
+    }
+
+    /* Border colors */
+    .border-ink-100 {
+      border-color: hsl(222 24% 18%);
+    }
+    .border-ink-200 {
+      border-color: hsl(222 24% 22%);
+    }
+    .border-ink-700 {
+      border-color: hsl(222 24% 30%);
+    }
+
+    /* Brand soft backgrounds (use brand-500 with low alpha) */
+    .bg-brand-50\/40 {
+      background-color: hsl(var(--brand-500) / 0.12);
+    }
+    .bg-brand-50\/30 {
+      background-color: hsl(var(--brand-500) / 0.1);
+    }
+    .bg-brand-100\/40 {
+      background-color: hsl(var(--brand-500) / 0.2);
+    }
+    .bg-brand-100\/60 {
+      background-color: hsl(var(--brand-500) / 0.25);
+    }
+    .bg-brand-200\/40 {
+      background-color: hsl(var(--brand-500) / 0.3);
+    }
+    .bg-brand-200\/30 {
+      background-color: hsl(var(--brand-500) / 0.22);
+    }
+
+    /* Inputs / form */
+    input,
+    textarea,
+    select {
+      background-color: hsl(222 24% 12%);
+      color: hsl(0 0% 96%);
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: hsl(0 0% 55%);
+    }
+
+    /* TopBar uses brand-700 — in dark mode push it darker */
+    .bg-brand-700 {
+      background-color: hsl(222 24% 12%);
+    }
+
+    /* Footer uses ink-950 — keep dark but harmonize */
+    .bg-ink-950 {
+      background-color: hsl(222 28% 5%);
+    }
+
+    /* Soft / elevated shadows */
+    .shadow-soft {
+      box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
+    }
+    .shadow-elevated {
+      box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Selection */
+    ::selection {
+      background-color: hsl(var(--brand-500) / 0.4);
+      color: hsl(0 0% 100%);
+    }
   }
 }
 
@@ -155,8 +358,19 @@
       radial-gradient(ellipse at bottom right, hsl(38 92% 88% / 0.4), transparent 50%);
   }
 
+  [data-theme-mode='dark'] .gradient-bg {
+    background:
+      radial-gradient(ellipse at top, hsl(var(--brand-500) / 0.12), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(38 92% 50% / 0.08), transparent 50%);
+  }
+
   .glass-card {
     @apply bg-white/80 backdrop-blur-md border border-white/40;
+  }
+
+  [data-theme-mode='dark'] .glass-card {
+    background-color: hsl(var(--card) / 0.7);
+    border-color: hsl(222 24% 22%);
   }
 }
 

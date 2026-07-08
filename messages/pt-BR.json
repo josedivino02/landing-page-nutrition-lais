@@ -451,6 +451,10 @@
   "locale-switcher": {
     "label": "Trocar idioma"
   },
+  "mode-toggle": {
+    "switch-to-light": "Mudar para modo claro",
+    "switch-to-dark": "Mudar para modo escuro"
+  },
   "footer-services": {
     "clinical": "Nutrição Clínica",
     "weight": "Emagrecimento",
