@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { MessageCircle, X } from 'lucide-react';
 import { CONTACT } from '@/lib/constants';
 import { formatWhatsAppLink } from '@/lib/utils';
 
 export function WhatsAppButton() {
+  const t = useTranslations('whatsapp');
   const [showTooltip, setShowTooltip] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
@@ -26,10 +28,7 @@ export function WhatsAppButton() {
     sessionStorage.setItem('wa-tooltip-dismissed', '1');
   };
 
-  const whatsappLink = formatWhatsAppLink(
-    CONTACT.whatsapp,
-    'Olá Laís, gostaria de agendar uma consulta.',
-  );
+  const whatsappLink = formatWhatsAppLink(CONTACT.whatsapp, t('default-message'));
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
@@ -46,20 +45,18 @@ export function WhatsAppButton() {
               type="button"
               onClick={handleDismissTooltip}
               className="absolute top-2 right-2 inline-flex h-6 w-6 items-center justify-center rounded-full text-ink-500 hover:bg-ink-100 transition-colors"
-              aria-label="Fechar mensagem"
+              aria-label={t('tooltip-close')}
             >
               <X className="h-3.5 w-3.5" />
             </button>
-            <p className="text-sm font-medium text-ink-900 leading-relaxed">
-              👋 Olá! Posso te ajudar a agendar sua consulta?
-            </p>
+            <p className="text-sm font-medium text-ink-900 leading-relaxed">{t('tooltip')}</p>
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-brand-600 hover:text-brand-700"
             >
-              Falar agora →
+              {t('tooltip-cta')}
             </a>
             <span
               className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-r border-b border-ink-100"
@@ -73,7 +70,7 @@ export function WhatsAppButton() {
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar no WhatsApp"
+        aria-label={t('label')}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.2, type: 'spring', stiffness: 200 }}
@@ -81,7 +78,7 @@ export function WhatsAppButton() {
         whileTap={{ scale: 0.96 }}
         className="relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-elevated hover:bg-[#1da851] transition-colors"
       >
-        <span className="sr-only">Falar no WhatsApp</span>
+        <span className="sr-only">{t('label')}</span>
         <span
           className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping"
           aria-hidden="true"

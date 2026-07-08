@@ -2,19 +2,17 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Calendar, MessageCircle, Star, Award, CheckCircle2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Counter } from '@/components/animations/counter';
-import { HERO_IMAGE, PROFESSIONAL, CONTACT } from '@/lib/constants';
+import { HERO_IMAGE, HERO_STATS, PROFESSIONAL, CONTACT } from '@/lib/constants';
 import { formatWhatsAppLink } from '@/lib/utils';
 
-const heroStats = [
-  { value: 8, suffix: '+', label: 'Anos de experiência' },
-  { value: 2000, suffix: '+', label: 'Pacientes atendidos' },
-  { value: 4.9, suffix: '/5', label: 'Avaliação média', decimals: 1 },
-];
-
 export function HeroSection() {
+  const t = useTranslations('hero');
+  const tWhatsapp = useTranslations('whatsapp');
+
   return (
     <section
       id="topo"
@@ -38,7 +36,7 @@ export function HeroSection() {
           >
             <Sparkles className="h-3.5 w-3.5 text-gold-500" aria-hidden="true" />
             <span className="text-xs font-semibold uppercase tracking-wider text-brand-700">
-              Nutrição clínica e esportiva
+              {t('eyebrow')}
             </span>
           </motion.div>
 
@@ -48,9 +46,9 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-ink-900 text-balance"
           >
-            Transforme sua alimentação e{' '}
-            <span className="gradient-text">alcance seus objetivos</span>{' '}
-            com acompanhamento personalizado.
+            {t('title-1')}{' '}
+            <span className="gradient-text">{t('title-highlight')}</span>{' '}
+            {t('title-2')}
           </motion.h1>
 
           <motion.p
@@ -59,7 +57,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-ink-600 leading-relaxed max-w-xl text-pretty"
           >
-            Emagrecimento • Hipertrofia • Reeducação Alimentar • Nutrição Clínica
+            {t('subtitle')}
           </motion.p>
 
           <motion.ul
@@ -68,17 +66,12 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-ink-700"
           >
-            {['Plano 100% individual', 'Atendimento humanizado', 'Suporte contínuo'].map(
-              (item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <CheckCircle2
-                    className="h-4 w-4 shrink-0 text-brand-500"
-                    aria-hidden="true"
-                  />
-                  <span>{item}</span>
-                </li>
-              ),
-            )}
+            {[t('benefits.plan'), t('benefits.human'), t('benefits.support')].map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
           </motion.ul>
 
           <motion.div
@@ -90,20 +83,17 @@ export function HeroSection() {
             <Button asChild size="xl" variant="default">
               <a href="#contato">
                 <Calendar className="h-5 w-5" aria-hidden="true" />
-                Agendar Consulta
+                {t('schedule')}
               </a>
             </Button>
             <Button asChild size="xl" variant="whatsapp">
               <a
-                href={formatWhatsAppLink(
-                  CONTACT.whatsapp,
-                  'Olá Laís, gostaria de agendar uma consulta.',
-                )}
+                href={formatWhatsAppLink(CONTACT.whatsapp, tWhatsapp('default-message'))}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                Falar no WhatsApp
+                {t('whatsapp')}
               </a>
             </Button>
           </motion.div>
@@ -118,17 +108,13 @@ export function HeroSection() {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-gold-400 text-gold-400"
-                    aria-hidden="true"
-                  />
+                  <Star key={i} className="h-4 w-4 fill-gold-400 text-gold-400" aria-hidden="true" />
                 ))}
               </div>
               <div className="mt-1 text-sm font-medium text-ink-800">
                 {PROFESSIONAL.rating}/5{' '}
                 <span className="text-ink-500 font-normal">
-                  ({PROFESSIONAL.ratingCount} avaliações)
+                  ({PROFESSIONAL.ratingCount} {t('rating-prefix')})
                 </span>
               </div>
             </div>
@@ -148,14 +134,13 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-[4/5] sm:aspect-[5/6] w-full max-w-md lg:max-w-none mx-auto"
           >
-            {/* Decorative frame */}
             <div className="absolute -inset-3 sm:-inset-4 rounded-[2rem] bg-gradient-to-br from-brand-200 via-brand-100 to-gold-200/40 -z-10" />
             <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 h-32 w-32 sm:h-48 sm:w-48 rounded-full bg-brand-200/50 -z-10 blur-2xl" />
 
             <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] shadow-elevated">
               <Image
                 src={HERO_IMAGE}
-                alt="Nutricionista Laís Silva atendendo paciente em consultório moderno"
+                alt={t('eyebrow')}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
@@ -163,7 +148,6 @@ export function HeroSection() {
               />
             </div>
 
-            {/* Floating badges */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -175,7 +159,7 @@ export function HeroSection() {
                   <CheckCircle2 className="h-5 w-5 text-brand-600" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-xs text-ink-500">Pacientes</div>
+                  <div className="text-xs text-ink-500">{t('floating.patients-label')}</div>
                   <div className="font-bold text-ink-900">
                     <Counter value={2000} suffix="+" duration={2.5} />
                   </div>
@@ -194,7 +178,7 @@ export function HeroSection() {
                   <Star className="h-5 w-5 fill-gold-500 text-gold-500" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-xs text-ink-500">Avaliação</div>
+                  <div className="text-xs text-ink-500">{t('floating.rating-label')}</div>
                   <div className="font-bold text-ink-900">
                     <Counter value={4.9} suffix="/5" decimals={1} />
                   </div>
@@ -208,9 +192,9 @@ export function HeroSection() {
       {/* Stats bar */}
       <div className="border-t border-ink-100 bg-white">
         <div className="container-wide grid grid-cols-3 divide-x divide-ink-100">
-          {heroStats.map((stat, idx) => (
+          {HERO_STATS.map((stat, idx) => (
             <motion.div
-              key={stat.label}
+              key={stat.key}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -221,10 +205,12 @@ export function HeroSection() {
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
-                  decimals={stat.decimals || 0}
+                  decimals={stat.decimals}
                 />
               </div>
-              <div className="mt-1 text-xs sm:text-sm text-ink-500 font-medium">{stat.label}</div>
+              <div className="mt-1 text-xs sm:text-sm text-ink-500 font-medium">
+                {t(`stats.${stat.key}`)}
+              </div>
             </motion.div>
           ))}
         </div>

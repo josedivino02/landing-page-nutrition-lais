@@ -3,49 +3,105 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* ===========================
+     Default = Verde Natural
+     =========================== */
+  :root,
+  [data-theme='verde'] {
     --background: 0 0% 100%;
     --foreground: 222 24% 12%;
     --card: 0 0% 100%;
     --card-foreground: 222 24% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 24% 12%;
-    --primary: 137 47% 37%; /* brand-500 #3FA34D */
+    --primary: 124 47% 37%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 14% 96%;
     --secondary-foreground: 222 24% 12%;
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%;
-    --accent: 38 92% 47%; /* gold-500 */
+    --accent: 38 92% 47%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 137 47% 37%;
+    --ring: 124 47% 37%;
     --radius: 1rem;
+
+    --brand-50: 124 60% 97%;
+    --brand-100: 124 55% 92%;
+    --brand-200: 124 50% 84%;
+    --brand-300: 124 45% 73%;
+    --brand-400: 124 45% 56%;
+    --brand-500: 124 47% 37%;
+    --brand-600: 124 50% 32%;
+    --brand-700: 124 50% 27%;
+    --brand-800: 124 45% 22%;
+    --brand-900: 124 50% 17%;
+    --brand-950: 124 60% 8%;
   }
 
-  .dark {
+  /* ===========================
+     Theme: Azul Trust
+     =========================== */
+  [data-theme='azul'] {
+    --primary: 221 83% 53%;
+    --ring: 221 83% 53%;
+
+    --brand-50: 214 100% 97%;
+    --brand-100: 214 95% 93%;
+    --brand-200: 213 97% 87%;
+    --brand-300: 212 96% 78%;
+    --brand-400: 213 94% 68%;
+    --brand-500: 217 91% 60%;
+    --brand-600: 221 83% 53%;
+    --brand-700: 224 76% 48%;
+    --brand-800: 226 71% 40%;
+    --brand-900: 224 64% 33%;
+    --brand-950: 226 57% 21%;
+  }
+
+  /* ===========================
+     Theme: Cinza Premium
+     =========================== */
+  [data-theme='cinza'] {
+    --primary: 215 25% 27%;
+    --ring: 215 25% 27%;
+
+    --brand-50: 210 20% 98%;
+    --brand-100: 220 14% 96%;
+    --brand-200: 220 13% 91%;
+    --brand-300: 216 12% 84%;
+    --brand-400: 218 11% 65%;
+    --brand-500: 215 16% 47%;
+    --brand-600: 215 19% 35%;
+    --brand-700: 215 25% 27%;
+    --brand-800: 215 28% 17%;
+    --brand-900: 221 39% 11%;
+    --brand-950: 224 71% 4%;
+  }
+
+  /* ===========================
+     Dark mode (combined with any theme)
+     =========================== */
+  [data-theme-mode='dark'] {
     --background: 222 24% 8%;
     --foreground: 0 0% 98%;
     --card: 222 24% 10%;
     --card-foreground: 0 0% 98%;
     --popover: 222 24% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 137 47% 45%;
     --primary-foreground: 0 0% 100%;
     --secondary: 222 24% 14%;
     --secondary-foreground: 0 0% 98%;
     --muted: 222 24% 14%;
     --muted-foreground: 220 9% 65%;
-    --accent: 38 92% 55%;
     --accent-foreground: 222 24% 12%;
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 24% 18%;
     --input: 222 24% 18%;
-    --ring: 137 47% 45%;
   }
 
   * {
@@ -94,8 +150,9 @@
   }
 
   .gradient-bg {
-    background: radial-gradient(ellipse at top, rgba(63, 163, 77, 0.08), transparent 50%),
-      radial-gradient(ellipse at bottom right, rgba(224, 154, 19, 0.06), transparent 50%);
+    background:
+      radial-gradient(ellipse at top, hsl(var(--brand-100) / 0.4), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(38 92% 88% / 0.4), transparent 50%);
   }
 
   .glass-card {

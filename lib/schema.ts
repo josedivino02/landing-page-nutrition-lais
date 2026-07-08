@@ -20,13 +20,14 @@ export const contactFormSchema = z.object({
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-export const GOALS = [
-  { value: 'emagrecimento', label: 'Emagrecimento' },
-  { value: 'hipertrofia', label: 'Hipertrofia / Ganho de massa' },
-  { value: 'reeducacao', label: 'Reeducação alimentar' },
-  { value: 'clinica', label: 'Nutrição clínica' },
-  { value: 'esportiva', label: 'Nutrição esportiva' },
-  { value: 'gestante', label: 'Gestante' },
-  { value: 'idoso', label: 'Idoso' },
-  { value: 'outro', label: 'Outro' },
+export const FORM_GOAL_KEYS = [
+  'emagrecimento',
+  'hipertrofia',
+  'reeducacao',
+  'clinica',
+  'esportiva',
+  'gestante',
+  'idoso',
+  'outro',
 ] as const;
+export type FormGoalKey = (typeof FORM_GOAL_KEYS)[number];

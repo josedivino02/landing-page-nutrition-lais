@@ -1,6 +1,7 @@
 'use client';
 
-import { FAQ } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
+import { FAQ_KEYS } from '@/lib/constants';
 import { SectionHeading } from '@/components/ui/section-heading';
 import {
   Accordion,
@@ -11,25 +12,19 @@ import {
 import { FadeIn } from '@/components/animations/fade-in';
 
 export function FaqSection() {
+  const t = useTranslations('faq');
+
   return (
-    <section
-      id="faq"
-      className="section bg-white"
-      aria-label="Perguntas frequentes"
-    >
+    <section id="faq" className="section bg-white" aria-label="Perguntas frequentes">
       <div className="container-tight max-w-3xl">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Perguntas frequentes"
-          subtitle="Reunimos as dúvidas mais comuns. Se ainda tiver perguntas, é só falar comigo."
-        />
+        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
         <FadeIn>
           <Accordion type="single" collapsible className="w-full">
-            {FAQ.map((item, idx) => (
-              <AccordionItem key={item.question} value={`item-${idx}`}>
-                <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+            {FAQ_KEYS.map((key, idx) => (
+              <AccordionItem key={key} value={`item-${idx}`}>
+                <AccordionTrigger>{t(`items.${key}.question`)}</AccordionTrigger>
+                <AccordionContent>{t(`items.${key}.answer`)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

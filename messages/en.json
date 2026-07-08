@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "title": "Nutrição Laís — Nutritionist | Weight Loss & Health",
+    "description": "Transform your eating habits and reach your goals with personalized nutritional coaching. Weight loss, hypertrophy, food re-education and clinical nutrition."
+  },
+  "nav": {
+    "sobre": "About",
+    "beneficios": "Benefits",
+    "servicos": "Services",
+    "como-funciona": "How It Works",
+    "depoimentos": "Reviews",
+    "planos": "Plans",
+    "faq": "FAQ",
+    "contato": "Contact",
+    "agendar": "Book Appointment",
+    "whatsapp": "Chat on WhatsApp",
+    "open-menu": "Open menu",
+    "close-menu": "Close menu",
+    "navigation-menu": "Navigation menu",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "brand-subtitle": "Health & Wellness",
+    "agende-cta": "Book your appointment"
+  },
+  "hero": {
+    "eyebrow": "Clinical & Sports Nutrition",
+    "title-1": "Transform your eating and",
+    "title-highlight": "reach your goals",
+    "title-2": "with personalized coaching.",
+    "subtitle": "Weight Loss • Hypertrophy • Food Re-education • Clinical Nutrition",
+    "benefits": {
+      "plan": "100% individual plan",
+      "human": "Humanized care",
+      "support": "Continuous support"
+    },
+    "schedule": "Book Appointment",
+    "whatsapp": "Chat on WhatsApp",
+    "rating-prefix": "Reviews",
+    "stats": {
+      "experience": "Years of experience",
+      "patients": "Patients served",
+      "rating": "Average rating"
+    },
+    "floating": {
+      "patients-label": "Patients",
+      "rating-label": "Rating"
+    }
+  },
+  "trust": {
+    "crn": "Active CRN",
+    "experience": "Experience",
+    "patients": "Patients served",
+    "rating": "Average rating"
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "Hi, I'm",
+    "name": "Laís Silva",
+    "p1": "Nutritionist {crn} with 8+ years of experience helping people transform their health and quality of life through food. I believe eating well doesn't need to be complicated — it needs to be sustainable.",
+    "p2": "I've served more than {patients} with different goals — from weight loss and muscle gain to pregnant women, elderly patients and treatment of metabolic diseases. Each meal plan is unique, tailored to your routine, preferences and needs.",
+    "highlights": {
+      "postgrad": "Post-graduated in Clinical Nutrition",
+      "sports": "Specialist in Sports Nutrition",
+      "service": "Clinical and sports care"
+    },
+    "rating-label": "Rated by {count} patients",
+    "cta-schedule": "Book appointment",
+    "cta-services": "See services"
+  },
+  "benefits": {
+    "eyebrow": "Benefits",
+    "title": "What you gain from the coaching",
+    "subtitle": "Meal plan, support, guidance and everything you need to reach your health goals.",
+    "items": {
+      "plan": {
+        "title": "Personalized meal plan",
+        "description": "A diet tailored to your routine, preferences and individual goals."
+      },
+      "education": {
+        "title": "Food education",
+        "description": "Learn to make conscious choices and keep your results forever."
+      },
+      "muscle": {
+        "title": "Muscle gain",
+        "description": "Nutritional strategies for hypertrophy alongside your training."
+      },
+      "weight": {
+        "title": "Healthy weight loss",
+        "description": "Sustainable weight loss without restrictive diets or yo-yo effect."
+      },
+      "quality": {
+        "title": "Better quality of life",
+        "description": "More energy, vitality and health to enjoy what matters."
+      },
+      "followup": {
+        "title": "Continuous follow-up",
+        "description": "Close support with periodic adjustments to guarantee your results."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Solutions for every goal",
+    "subtitle": "I serve different profiles and needs, always with an individualized plan and close follow-up.",
+    "items": {
+      "clinical": {
+        "title": "Clinical Nutrition",
+        "description": "Nutritional treatment for diabetes, hypertension, cholesterol and metabolic diseases."
+      },
+      "weight": {
+        "title": "Weight Loss",
+        "description": "Structured program for healthy and lasting weight loss."
+      },
+      "muscle": {
+        "title": "Hypertrophy",
+        "description": "Protocols for muscle gain with performance and health in mind."
+      },
+      "sports": {
+        "title": "Sports Nutrition",
+        "description": "Specific nutrition for amateur and professional athletes."
+      },
+      "pregnant": {
+        "title": "Pregnant Women",
+        "description": "Safe and healthy nutritional care throughout all stages of pregnancy."
+      },
+      "elderly": {
+        "title": "Elderly",
+        "description": "Nutritional care focused on longevity, immunity and quality of life."
+      },
+      "reeducation": {
+        "title": "Food Re-education",
+        "description": "Changing eating habits with professional follow-up."
+      },
+      "online": {
+        "title": "Online Consultation",
+        "description": "Video-call appointments with the same quality as in-person."
+      },
+      "inperson": {
+        "title": "In-person Consultation",
+        "description": "Appointments in a fully equipped office."
+      }
+    },
+    "cta": "Tell me more"
+  },
+  "how-it-works": {
+    "eyebrow": "How it works",
+    "title": "In 4 simple steps you start transforming",
+    "subtitle": "A clear process, from booking to ongoing follow-up of your results.",
+    "step-prefix": "Step",
+    "steps": {
+      "schedule": {
+        "title": "Booking",
+        "description": "Pick the best day and time for your appointment, in-person or online."
+      },
+      "assessment": {
+        "title": "Assessment",
+        "description": "Full anamnesis, physical assessment, bioimpedance and exam analysis."
+      },
+      "plan": {
+        "title": "Meal plan",
+        "description": "You receive an individualized meal plan, with a substitution list."
+      },
+      "followup": {
+        "title": "Follow-up",
+        "description": "Periodic return appointments with adjustments and WhatsApp support."
+      }
+    }
+  },
+  "differentials": {
+    "eyebrow": "Differentials",
+    "title": "Why choose my service",
+    "subtitle": "Individualized, up-to-date care focused on you — from booking to final results.",
+    "list": {
+      "1": "Humanized and individualized care",
+      "2": "100% personalized meal plan",
+      "3": "WhatsApp support throughout the follow-up",
+      "4": "Complete physical assessment in every appointment",
+      "5": "Bioimpedance to track your progress",
+      "6": "Constant updates based on evidence",
+      "7": "In-person and online care",
+      "8": "Strategies for different profiles and goals"
+    },
+    "cta": "Reserve my spot",
+    "blocks": {
+      "evidence": {
+        "title": "Evidence-based",
+        "description": "Constant updates on the latest research in nutrition and metabolism."
+      },
+      "human": {
+        "title": "Humanized care",
+        "description": "You are heard with attention — no judgment and a plan that fits your life."
+      },
+      "whatsapp": {
+        "title": "WhatsApp support",
+        "description": "Ask questions between appointments to never lose focus on your goal."
+      },
+      "bio": {
+        "title": "Bioimpedance in every appointment",
+        "description": "Track your body composition (lean mass, fat, water) with precision."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What my patients say",
+    "subtitle": "More than 2,000 people have already transformed their health. Read some stories.",
+    "items": {
+      "mariana": {
+        "name": "Mariana Souza",
+        "role": "Lost 12kg in 5 months",
+        "text": "Laís completely changed my relationship with food. I lost 12kg without going hungry and today I have energy for everything. Amazing service!"
+      },
+      "ricardo": {
+        "name": "Ricardo Almeida",
+        "role": "Gained 8kg of muscle",
+        "text": "I had trained for years and couldn't progress. With Laís's plan, I gained 8kg of lean mass in 6 months. A truly different professional."
+      },
+      "camila": {
+        "name": "Camila Ferreira",
+        "role": "Healthy pregnancy",
+        "text": "I had a smooth, swelling-free pregnancy. Laís accompanied me month by month with so much care. Highly recommend!"
+      },
+      "pedro": {
+        "name": "Pedro Henrique",
+        "role": "Diabetes treatment",
+        "text": "My glycated hemoglobin improved a lot after following the plan. Laís is very attentive and explains everything clearly."
+      },
+      "beatriz": {
+        "name": "Beatriz Lima",
+        "role": "Food re-education",
+        "text": "Today I eat everything in balance. I learned to read labels and build healthy meals. It changed my life!"
+      },
+      "felipe": {
+        "name": "Felipe Costa",
+        "role": "Amateur athlete",
+        "text": "My running performance improved dramatically. Laís understands sports and adjusts everything precisely."
+      }
+    }
+  },
+  "before-after": {
+    "eyebrow": "Results",
+    "title": "Real before and after",
+    "subtitle": "Each result comes from a personalized plan and close follow-up. Get inspired.",
+    "items": {
+      "mariana": {
+        "title": "Weight Loss — Mariana",
+        "description": "Food re-education focused on metabolic health.",
+        "duration": "5 months",
+        "result": "-12kg"
+      },
+      "ricardo": {
+        "title": "Hypertrophy — Ricardo",
+        "description": "Protocol for lean mass gain and performance.",
+        "duration": "6 months",
+        "result": "+8kg lean mass"
+      },
+      "beatriz": {
+        "title": "Re-education — Beatriz",
+        "description": "Habit change and nutritional balance.",
+        "duration": "4 months",
+        "result": "More energy"
+      },
+      "camila": {
+        "title": "Pregnancy — Camila",
+        "description": "Pre and postnatal follow-up.",
+        "duration": "9 months",
+        "result": "Healthy pregnancy"
+      }
+    },
+    "disclaimer": "* Results may vary from person to person, depending on plan adherence and individual factors."
+  },
+  "partners": {
+    "eyebrow": "Trust",
+    "title": "Partner companies and gyms",
+    "subtitle": "I accompany patients through partnerships with clinics, gyms and studios."
+  },
+  "plans": {
+    "eyebrow": "Plans",
+    "title": "Choose the plan that fits you",
+    "subtitle": "All plans include an initial consultation, personalized plan and professional support.",
+    "per-month": "per month",
+    "per-consult": "per consultation",
+    "footer": "We accept credit cards (up to 6x interest-free), PIX, bank slip and wire transfer.",
+    "items": {
+      "single": {
+        "name": "Single Consultation",
+        "description": "Ideal for those getting started or with a specific goal.",
+        "features": {
+          "1": "Complete anamnesis",
+          "2": "Physical assessment + bioimpedance",
+          "3": "Personalized meal plan",
+          "4": "Substitution list",
+          "5": "Support material",
+          "6": "WhatsApp support for 7 days"
+        },
+        "cta": "Book consultation"
+      },
+      "monthly": {
+        "name": "Monthly Follow-up",
+        "badge": "Most popular",
+        "description": "Our most sought-after plan for consistent results.",
+        "features": {
+          "1": "Everything in Single Consultation",
+          "2": "Weekly return appointments",
+          "3": "Continuous plan adjustments",
+          "4": "Unlimited WhatsApp support",
+          "5": "Monthly physical assessment",
+          "6": "Progress reports",
+          "7": "Exclusive recipes"
+        },
+        "cta": "Start now"
+      },
+      "premium": {
+        "name": "Premium Plan",
+        "description": "For those seeking maximum performance and fast results.",
+        "features": {
+          "1": "Everything in Monthly Follow-up",
+          "2": "Priority service",
+          "3": "Direct WhatsApp access",
+          "4": "On-demand extra appointments",
+          "5": "Advanced exam analysis",
+          "6": "Travel and event plans",
+          "7": "Family support included"
+        },
+        "cta": "I want Premium"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "We've gathered the most common questions. If you still have any, just reach out.",
+    "items": {
+      "q1": {
+        "question": "How does the consultation work?",
+        "answer": "The first appointment lasts about 60 minutes. We do a full anamnesis, physical assessment with bioimpedance and, within 5 business days, you receive your personalized meal plan as a PDF."
+      },
+      "q2": {
+        "question": "How long does the follow-up last?",
+        "answer": "It depends on your goal. On average we recommend at least 3 months for consistent results. Many patients continue for 6 to 12 months."
+      },
+      "q3": {
+        "question": "Do you accept health insurance?",
+        "answer": "We don't work directly with insurance, but we issue receipts for reimbursement. Check with your provider about coverage for nutritionist appointments."
+      },
+      "q4": {
+        "question": "How does online consultation work?",
+        "answer": "Online consultations are held by video call (Google Meet or Zoom), with the same duration and quality as in-person. You receive the meal plan as a PDF by email afterwards."
+      },
+      "q5": {
+        "question": "How is the meal plan built?",
+        "answer": "The plan is 100% personalized, considering your exams, routine, food preferences, restrictions and goals. It includes a substitution list for day-to-day flexibility."
+      },
+      "q6": {
+        "question": "How many return appointments are needed?",
+        "answer": "We recommend weekly returns in the first month and biweekly from the second month on. Everything is adjusted based on your progress."
+      },
+      "q7": {
+        "question": "Which regions do you serve?",
+        "answer": "The office is located in São Paulo, with easy access. For clients in other cities or states, we offer 100% online service with the same quality."
+      },
+      "q8": {
+        "question": "Can I pay in installments?",
+        "answer": "Yes. We accept credit cards (up to 6x interest-free), PIX, bank slip and wire transfer."
+      }
+    }
+  },
+  "form": {
+    "eyebrow": "Contact",
+    "title": "Let's talk?",
+    "subtitle": "Fill out the form or contact me directly on WhatsApp.",
+    "whatsapp-label": "WhatsApp",
+    "email-label": "Email",
+    "fields": {
+      "name": "Name",
+      "name-placeholder": "Your full name",
+      "phone": "Phone",
+      "phone-placeholder": "(11) 99999-9999",
+      "email": "Email",
+      "email-placeholder": "youremail@example.com",
+      "goal": "Goal",
+      "goal-placeholder": "Select your goal",
+      "message": "Message",
+      "message-placeholder": "Tell me a bit about your goal..."
+    },
+    "goals": {
+      "emagrecimento": "Weight Loss",
+      "hipertrofia": "Hypertrophy / Muscle gain",
+      "reeducacao": "Food re-education",
+      "clinica": "Clinical nutrition",
+      "esportiva": "Sports nutrition",
+      "gestante": "Pregnant",
+      "idoso": "Elderly",
+      "outro": "Other"
+    },
+    "submit": "Send message",
+    "sending": "Sending...",
+    "consent": "By sending, you agree with our {link}.",
+    "consent-link": "Privacy Policy",
+    "success-title": "Message sent!",
+    "success-desc": "Thanks for reaching out. I'll get back to you within 24 hours by email or WhatsApp.",
+    "errors": {
+      "required": "Required field"
+    }
+  },
+  "cta": {
+    "eyebrow": "Limited spots this week",
+    "title": "Start your transformation today.",
+    "subtitle": "Take the first step toward a healthier, more balanced life. Book your appointment and discover what nutrition can do for you.",
+    "schedule": "Book now",
+    "whatsapp": "Chat on WhatsApp",
+    "guarantees": "✓ No commitment · ✓ Reply within 24h · ✓ First appointment with full assessment"
+  },
+  "footer": {
+    "tagline": "Clinical and sports nutrition with humanized, individualized, evidence-based care.",
+    "quick-links": "Quick links",
+    "services-title": "Services",
+    "contact-title": "Contact",
+    "schedule-label": "Mon–Fri: 8am–7pm · Sat: 8am–1pm",
+    "copyright": "© {year} {siteName}. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact-link": "Contact",
+    "map-title": "Location map",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn"
+  },
+  "whatsapp": {
+    "tooltip": "👋 Hi! Can I help you book your appointment?",
+    "tooltip-cta": "Chat now →",
+    "tooltip-close": "Close message",
+    "label": "Chat on WhatsApp",
+    "default-message": "Hi Laís, I'd like to book an appointment."
+  },
+  "back-to-top": {
+    "label": "Back to top"
+  },
+  "theme-switcher": {
+    "label": "Switch color theme",
+    "menu-title": "Choose a theme",
+    "verde-name": "Natural Green",
+    "verde-desc": "Fresh, healthy and organic — the nutrition classic.",
+    "azul-name": "Trust Blue",
+    "azul-desc": "Medical, reliable and professional — ideal for clinics.",
+    "cinza-name": "Premium Gray",
+    "cinza-desc": "Sophisticated, modern and minimalist — premium clinic vibe."
+  },
+  "locale-switcher": {
+    "label": "Switch language"
+  },
+  "footer-services": {
+    "clinical": "Clinical Nutrition",
+    "weight": "Weight Loss",
+    "muscle": "Hypertrophy",
+    "pregnant": "Pregnant Women",
+    "online": "Online Consultation"
+  }
+}
