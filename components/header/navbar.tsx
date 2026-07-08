@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ThemeSwitcher } from '@/components/ui/theme-switcher';
-import { LocaleSwitcher } from '@/components/ui/locale-switcher';
 import { SITE } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { MobileMenu } from './mobile-menu';
@@ -89,10 +87,6 @@ export function Navbar() {
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <div className="hidden md:flex items-center gap-1">
-              <ThemeSwitcher />
-              <LocaleSwitcher />
-            </div>
             <Button
               asChild
               variant="default"

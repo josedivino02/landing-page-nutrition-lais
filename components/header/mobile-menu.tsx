@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ThemeSwitcher } from '@/components/ui/theme-switcher';
-import { LocaleSwitcher } from '@/components/ui/locale-switcher';
 import { SITE } from '@/lib/constants';
 
 interface MobileMenuProps {
@@ -65,11 +63,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 </span>
                 <span className="font-display text-base font-bold text-ink-900">{SITE.name}</span>
               </div>
-            </div>
-
-            <div className="flex items-center gap-2 px-6 py-3 border-b border-ink-100">
-              <ThemeSwitcher />
-              <LocaleSwitcher />
             </div>
 
             <nav className="flex-1 overflow-y-auto p-6" aria-label={t('navigation-menu')}>

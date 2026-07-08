@@ -12,9 +12,10 @@ export function TopBar() {
   const whatsappLink = formatWhatsAppLink(CONTACT.whatsapp, t('agende-cta'));
 
   return (
-    <div className="hidden md:block bg-brand-700 text-white text-xs">
-      <div className="container-wide flex items-center justify-between py-2 gap-4">
-        <div className="flex items-center gap-6 min-w-0">
+    <div className="bg-brand-700 text-white text-xs">
+      <div className="container-wide flex items-center justify-between py-1.5 sm:py-2 gap-3">
+        {/* Left: contact info (desktop only) */}
+        <div className="hidden md:flex items-center gap-6 min-w-0">
           <a
             href={`tel:${CONTACT.phone.replace(/\D/g, '')}`}
             className="flex items-center gap-1.5 hover:text-brand-100 transition-colors"
@@ -39,7 +40,19 @@ export function TopBar() {
           </span>
         </div>
 
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Mobile: tiny brand hint */}
+        <div className="flex md:hidden items-center gap-1.5 min-w-0">
+          <Phone className="h-3 w-3 shrink-0" aria-hidden="true" />
+          <a
+            href={`tel:${CONTACT.phone.replace(/\D/g, '')}`}
+            className="hover:text-brand-100 transition-colors truncate"
+          >
+            {formatPhoneDisplay(CONTACT.phone)}
+          </a>
+        </div>
+
+        {/* Right: switchers + CTA */}
+        <div className="flex items-center gap-2 shrink-0 ml-auto">
           <ThemeSwitcher compact />
           <LocaleSwitcher compact />
           <span className="hidden sm:block h-3 w-px bg-white/20" aria-hidden="true" />
