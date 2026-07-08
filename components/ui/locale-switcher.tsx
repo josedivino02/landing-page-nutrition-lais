@@ -58,7 +58,7 @@ export function LocaleSwitcher({ compact = false }: { compact?: boolean }) {
           'inline-flex items-center gap-1.5 rounded-full text-sm font-medium transition-colors',
           compact
             ? 'h-9 px-3 text-white/90 hover:bg-white/10 hover:text-white'
-            : 'h-10 px-3 text-ink-700 hover:bg-ink-100 hover:text-ink-900 border border-ink-200',
+            : 'h-10 px-3 text-ink-700 dark:text-ink-200 hover:bg-ink-100 dark:hover:bg-ink-800 hover:text-ink-900 dark:hover:text-white border border-ink-200 dark:border-ink-700',
         )}
       >
         {compact ? (
@@ -81,7 +81,7 @@ export function LocaleSwitcher({ compact = false }: { compact?: boolean }) {
             transition={{ duration: 0.18 }}
             role="menu"
             aria-label="Idiomas disponíveis"
-            className="absolute right-0 top-full mt-2 w-48 rounded-2xl bg-white shadow-elevated border border-ink-100 p-2 z-50"
+            className="absolute right-0 top-full mt-2 w-48 rounded-2xl bg-white dark:bg-ink-800 shadow-elevated border border-ink-100 dark:border-ink-700 p-2 z-50"
           >
             <ul className="flex flex-col">
               {routing.locales.map((loc) => {
@@ -96,7 +96,7 @@ export function LocaleSwitcher({ compact = false }: { compact?: boolean }) {
                       onClick={() => handleSelect(loc)}
                       className={cn(
                         'flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left transition-colors',
-                        active ? 'bg-brand-50' : 'hover:bg-ink-50',
+                        active ? 'bg-brand-50 dark:bg-brand-900/30' : 'hover:bg-ink-50 dark:hover:bg-ink-700',
                       )}
                     >
                       <span className="text-base" aria-hidden="true">
@@ -105,7 +105,7 @@ export function LocaleSwitcher({ compact = false }: { compact?: boolean }) {
                       <span
                         className={cn(
                           'flex-1 text-sm font-medium',
-                          active ? 'text-brand-700' : 'text-ink-800',
+                          active ? 'text-brand-700 dark:text-brand-300' : 'text-ink-800 dark:text-ink-200',
                         )}
                       >
                         {meta.label}

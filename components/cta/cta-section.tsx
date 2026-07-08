@@ -19,7 +19,7 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 px-6 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-20 text-center overflow-hidden shadow-elevated"
+          className="relative rounded-3xl bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 dark:from-brand-800 dark:via-brand-700 dark:to-ink-900 px-6 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-20 text-center overflow-hidden shadow-elevated border border-brand-700/30 dark:border-brand-600/30"
         >
           <div
             className="absolute inset-0 opacity-30 mix-blend-overlay"
