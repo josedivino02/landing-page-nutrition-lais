@@ -12,7 +12,7 @@ export function CtaSection() {
   const tWhatsapp = useTranslations('whatsapp');
 
   return (
-    <section aria-label="Chamada para ação" className="relative overflow-hidden">
+    <section aria-label="Chamada para ação" className="relative overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-24">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
