@@ -396,8 +396,9 @@
     },
     "submit": "Send message",
     "sending": "Sending...",
-    "consent": "By sending, you agree with our {link}.",
+    "consent-start": "By sending, you agree with our",
     "consent-link": "Privacy Policy",
+    "consent-end": ".",
     "success-title": "Message sent!",
     "success-desc": "Thanks for reaching out. I'll get back to you within 24 hours by email or WhatsApp.",
     "errors": {

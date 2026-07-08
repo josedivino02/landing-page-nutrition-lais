@@ -396,8 +396,9 @@
     },
     "submit": "Enviar mensagem",
     "sending": "Enviando...",
-    "consent": "Ao enviar, você concorda com nossa {link}.",
+    "consent-start": "Ao enviar, você concorda com nossa",
     "consent-link": "Política de Privacidade",
+    "consent-end": ".",
     "success-title": "Mensagem enviada!",
     "success-desc": "Obrigada pelo contato. Em até 24 horas responderei pelo e-mail ou WhatsApp informado.",
     "errors": {

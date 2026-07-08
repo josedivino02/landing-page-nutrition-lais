@@ -227,16 +227,14 @@ export function ContactForm() {
                   </Button>
 
                   <p className="text-xs text-ink-500 text-center">
-                    {t.rich('consent', {
-                      link: (chunks) => (
-                        <a
-                          href="#politica-privacidade"
-                          className="underline hover:text-brand-600"
-                        >
-                          {chunks}
-                        </a>
-                      ),
-                    })}
+                    {t('consent-start')}{' '}
+                    <a
+                      href="#politica-privacidade"
+                      className="underline hover:text-brand-600"
+                    >
+                      {t('consent-link')}
+                    </a>
+                    {t('consent-end')}
                   </p>
                 </motion.form>
               )}
