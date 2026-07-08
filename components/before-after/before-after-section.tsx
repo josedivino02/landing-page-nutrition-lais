@@ -2,8 +2,9 @@
 
 import { Clock, TrendingUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { BEFORE_AFTER, BEFORE_AFTER_PLACEHOLDERS } from '@/lib/constants';
+import { BEFORE_AFTER } from '@/lib/constants';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { ImagePlaceholder } from '@/components/ui/image-placeholder';
 import { FadeIn } from '@/components/animations/fade-in';
 
 export function BeforeAfterSection() {
@@ -18,14 +19,8 @@ export function BeforeAfterSection() {
           {BEFORE_AFTER.map((item, idx) => (
             <FadeIn key={item.key} delay={idx * 0.08} className="group">
               <article className="rounded-2xl bg-white border border-ink-100 overflow-hidden shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
-                <div className="relative aspect-square overflow-hidden bg-ink-100">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{
-                      backgroundImage: `url(${BEFORE_AFTER_PLACEHOLDERS[idx % BEFORE_AFTER_PLACEHOLDERS.length]})`,
-                    }}
-                    aria-label={t(`items.${item.key}.title`)}
-                  />
+                <div className="relative">
+                  <ImagePlaceholder variant="square" theme="primary" />
                   <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-ink-800 shadow-soft">
                     <TrendingUp className="h-3 w-3 text-brand-600" aria-hidden="true" />
                     {item.result}

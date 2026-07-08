@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Calendar, MessageCircle, Star, Award, CheckCircle2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Counter } from '@/components/animations/counter';
-import { HERO_IMAGE, HERO_STATS, PROFESSIONAL, CONTACT } from '@/lib/constants';
+import { ImagePlaceholder } from '@/components/ui/image-placeholder';
+import { HERO_STATS, PROFESSIONAL, CONTACT } from '@/lib/constants';
 import { formatWhatsAppLink } from '@/lib/utils';
 
 export function HeroSection() {
@@ -137,15 +137,8 @@ export function HeroSection() {
             <div className="absolute -inset-3 sm:-inset-4 rounded-[2rem] bg-gradient-to-br from-brand-200 via-brand-100 to-gold-200/40 -z-10" />
             <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 h-32 w-32 sm:h-48 sm:w-48 rounded-full bg-brand-200/50 -z-10 blur-2xl" />
 
-            <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] shadow-elevated">
-              <Image
-                src={HERO_IMAGE}
-                alt={t('eyebrow')}
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-                className="object-cover"
-              />
+            <div className="relative h-full w-full shadow-elevated rounded-[1.75rem]">
+              <ImagePlaceholder variant="portrait" theme="primary" label="Foto da nutricionista" />
             </div>
 
             <motion.div

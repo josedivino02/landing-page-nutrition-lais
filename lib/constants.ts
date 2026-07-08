@@ -154,18 +154,11 @@ export const FORM_GOAL_KEYS = [
   'outro',
 ] as const;
 
-// Hero image (placeholder Unsplash)
-export const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200&h=1400&fit=crop&q=80';
+// Hero image (placeholder Unsplash) — currently unused, replaced by ImagePlaceholder
+// export const HERO_IMAGE = 'https://images.unsplash.com/...';
 
-// About image
-export const ABOUT_IMAGE =
-  'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=900&h=1100&fit=crop&q=80';
+// About image — currently unused, replaced by ImagePlaceholder
+// export const ABOUT_IMAGE = 'https://images.unsplash.com/...';
 
-// Before/After placeholder images
-export const BEFORE_AFTER_PLACEHOLDERS = [
-  'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop&q=80',
-] as const;
+// Before/After placeholder images — currently unused, replaced by ImagePlaceholder
+// export const BEFORE_AFTER_PLACEHOLDERS = [...] as const;

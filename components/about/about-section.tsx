@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { GraduationCap, Award, Stethoscope } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ABOUT_IMAGE, PROFESSIONAL } from '@/lib/constants';
+import { ImagePlaceholder } from '@/components/ui/image-placeholder';
+import { PROFESSIONAL } from '@/lib/constants';
 import { FadeIn } from '@/components/animations/fade-in';
 import { Counter } from '@/components/animations/counter';
 
@@ -23,14 +23,8 @@ export function AboutSection() {
         <FadeIn className="lg:col-span-2 order-1">
           <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
             <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand-200 to-gold-200/40 -z-10" />
-            <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] shadow-elevated">
-              <Image
-                src={ABOUT_IMAGE}
-                alt={t('title')}
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover"
-              />
+            <div className="relative h-full w-full shadow-elevated rounded-[1.75rem]">
+              <ImagePlaceholder variant="portrait" theme="gold" label="Foto profissional" />
             </div>
 
             <div className="absolute -right-4 -bottom-4 sm:-right-6 sm:-bottom-6 bg-white rounded-2xl shadow-elevated p-4 sm:p-5 border border-ink-100 max-w-[220px]">
