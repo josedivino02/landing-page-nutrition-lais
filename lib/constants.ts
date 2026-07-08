@@ -96,18 +96,21 @@ export const PLANS = [
     price: 'R$ 280',
     period: 'consulta',
     highlight: false,
+    featureCount: 6,
   },
   {
     key: 'monthly',
     price: 'R$ 350',
     period: 'mensal',
     highlight: true,
+    featureCount: 7,
   },
   {
     key: 'premium',
     price: 'R$ 590',
     period: 'mensal',
     highlight: false,
+    featureCount: 7,
   },
 ] as const;
 

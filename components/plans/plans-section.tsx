@@ -76,9 +76,8 @@ export function PlansSection() {
                 </header>
 
                 <ul className="mt-8 space-y-3 flex-1">
-                  {[1, 2, 3, 4, 5, 6, 7].map((num) => {
+                  {Array.from({ length: plan.featureCount }, (_, i) => i + 1).map((num) => {
                     const feature = t(`items.${plan.key}.features.${num}`);
-                    if (!feature || feature === `items.${plan.key}.features.${num}`) return null;
                     return (
                       <li key={num} className="flex items-start gap-3">
                         <span
