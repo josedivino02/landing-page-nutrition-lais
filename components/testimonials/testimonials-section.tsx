@@ -11,14 +11,14 @@ export function TestimonialsSection() {
   const t = useTranslations('testimonials');
 
   return (
-    <section id="depoimentos" className="section bg-ink-50/50" aria-label="Depoimentos de pacientes">
+    <section id="depoimentos" className="section bg-ink-50/50 dark:bg-ink-900" aria-label="Depoimentos de pacientes">
       <div className="container-wide">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {TESTIMONIALS.map((testimonial, idx) => (
             <FadeIn key={testimonial.key} delay={idx * 0.06} className="h-full">
-              <article className="group h-full bg-white rounded-2xl border border-ink-100 p-6 sm:p-8 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+              <article className="group h-full bg-white dark:bg-ink-800 rounded-2xl border border-ink-100 dark:border-ink-700 p-6 sm:p-8 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <Quote
                   className="absolute -top-2 -right-2 h-20 w-20 text-brand-100/60 group-hover:text-brand-200/60 transition-colors"
                   aria-hidden="true"

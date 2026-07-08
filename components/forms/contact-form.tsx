@@ -57,26 +57,26 @@ export function ContactForm() {
           />
 
           <div className="mt-6 space-y-4">
-            <div className="rounded-2xl bg-white border border-ink-100 p-5 shadow-soft">
-              <div className="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-1">
+            <div className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-5 shadow-soft">
+              <div className="text-sm font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wider mb-1">
                 {t('whatsapp-label')}
               </div>
               <a
                 href={formatWhatsAppLink(CONTACT.whatsapp, tWhatsapp('default-message'))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold text-ink-900 hover:text-brand-600 transition-colors"
+                className="text-lg font-semibold text-ink-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
               >
                 {CONTACT.phone}
               </a>
             </div>
-            <div className="rounded-2xl bg-white border border-ink-100 p-5 shadow-soft">
-              <div className="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-1">
+            <div className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-5 shadow-soft">
+              <div className="text-sm font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wider mb-1">
                 {t('email-label')}
               </div>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="text-lg font-semibold text-ink-900 hover:text-brand-600 transition-colors"
+                className="text-lg font-semibold text-ink-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
               >
                 {CONTACT.email}
               </a>
@@ -85,7 +85,7 @@ export function ContactForm() {
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <div className="rounded-3xl bg-white border border-ink-100 shadow-elevated p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+          <div className="rounded-3xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 shadow-elevated p-6 sm:p-8 lg:p-10 relative overflow-hidden">
             <AnimatePresence mode="wait">
               {submitted ? (
                 <motion.div

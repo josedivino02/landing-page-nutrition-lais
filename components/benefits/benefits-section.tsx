@@ -27,7 +27,7 @@ export function BenefitsSection() {
   const t = useTranslations('benefits');
 
   return (
-    <section id="beneficios" className="section bg-white" aria-label="Benefícios do acompanhamento">
+    <section id="beneficios" className="section bg-white dark:bg-ink-950" aria-label="Benefícios do acompanhamento">
       <div className="container-wide">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
@@ -38,7 +38,7 @@ export function BenefitsSection() {
               <FadeIn
                 key={benefit.key}
                 delay={idx * 0.05}
-                className="group relative rounded-2xl bg-white border border-ink-100 shadow-soft p-6 sm:p-8 hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 shadow-soft p-6 sm:p-8 hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 <div
                   className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-brand-100/40 blur-2xl group-hover:bg-brand-200/60 transition-colors"

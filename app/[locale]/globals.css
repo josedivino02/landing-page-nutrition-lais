@@ -84,29 +84,28 @@
 
   /* ===============================================
      Dark Mode (independent of palette)
-     Brand colors get brighter so they hold up on dark
      =============================================== */
   [data-theme-mode='dark'] {
     --background: 222 24% 7%;
     --foreground: 0 0% 96%;
-    --card: 222 24% 10%;
+    --card: 222 24% 11%;
     --card-foreground: 0 0% 96%;
-    --popover: 222 24% 10%;
+    --popover: 222 24% 11%;
     --popover-foreground: 0 0% 96%;
     --primary-foreground: 222 24% 8%;
-    --secondary: 222 24% 14%;
+    --secondary: 222 24% 16%;
     --secondary-foreground: 0 0% 96%;
-    --muted: 222 24% 14%;
+    --muted: 222 24% 16%;
     --muted-foreground: 220 9% 65%;
     --accent: 38 92% 55%;
     --accent-foreground: 222 24% 8%;
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
-    --border: 222 24% 18%;
-    --input: 222 24% 18%;
+    --border: 222 24% 20%;
+    --input: 222 24% 14%;
+    --ring: 124 55% 60%;
 
-    /* Brand stays roughly the same so the visual identity holds,
-       but a touch brighter for contrast against the dark surface. */
+    /* Brand brighter for contrast on dark */
     --brand-50: 124 30% 18%;
     --brand-100: 124 35% 22%;
     --brand-200: 124 40% 28%;
@@ -120,7 +119,6 @@
     --brand-950: 124 80% 95%;
   }
 
-  /* Azul in dark mode: brighter blue */
   [data-theme-mode='dark'][data-theme='azul'] {
     --brand-50: 217 35% 18%;
     --brand-100: 217 45% 24%;
@@ -135,7 +133,6 @@
     --brand-950: 217 100% 96%;
   }
 
-  /* Cinza in dark mode: brighter neutral */
   [data-theme-mode='dark'][data-theme='cinza'] {
     --brand-50: 215 15% 16%;
     --brand-100: 215 18% 22%;
@@ -178,65 +175,17 @@
 }
 
 /* ===========================================================
-   DARK MODE OVERRIDES
-   These rules remap the most-used Tailwind classes so the
-   existing markup keeps working when dark mode is active.
+   DARK MODE — minimal, intentional overrides
+   Only invert things that are semantically safe:
+   - Text colors (always flip)
+   - Subtle borders (always flip)
+   - Form inputs (always flip)
+   Do NOT auto-invert bg-* classes (they carry design intent).
+   Components opt in via Tailwind dark: variants.
    =========================================================== */
 @layer base {
   [data-theme-mode='dark'] {
-    /* Surfaces */
-    .bg-white {
-      background-color: hsl(var(--card));
-    }
-    .bg-white\/80 {
-      background-color: hsl(var(--card) / 0.85);
-    }
-    .bg-white\/90 {
-      background-color: hsl(var(--card) / 0.95);
-    }
-    .bg-white\/95 {
-      background-color: hsl(var(--card) / 0.95);
-    }
-    .bg-white\/70 {
-      background-color: hsl(var(--card) / 0.7);
-    }
-    .bg-white\/60 {
-      background-color: hsl(var(--card) / 0.6);
-    }
-    .bg-white\/40 {
-      background-color: hsl(var(--card) / 0.4);
-    }
-    .bg-white\/20 {
-      background-color: hsl(var(--card) / 0.2);
-    }
-    .bg-white\/10 {
-      background-color: hsl(var(--card) / 0.1);
-    }
-    .bg-white\/5 {
-      background-color: hsl(var(--card) / 0.05);
-    }
-
-    /* Subtle ink backgrounds */
-    .bg-ink-50 {
-      background-color: hsl(222 24% 12%);
-    }
-    .bg-ink-50\/50 {
-      background-color: hsl(222 24% 12% / 0.5);
-    }
-    .bg-ink-50\/40 {
-      background-color: hsl(222 24% 12% / 0.4);
-    }
-    .bg-ink-50\/30 {
-      background-color: hsl(222 24% 12% / 0.3);
-    }
-    .bg-ink-100 {
-      background-color: hsl(222 24% 14%);
-    }
-    .bg-ink-100\/40 {
-      background-color: hsl(222 24% 14% / 0.4);
-    }
-
-    /* Text colors */
+    /* Text colors — always safe to invert */
     .text-ink-900 {
       color: hsl(0 0% 96%);
     }
@@ -261,43 +210,23 @@
     .text-ink-200 {
       color: hsl(0 0% 38%);
     }
+    .text-ink-100 {
+      color: hsl(0 0% 32%);
+    }
 
-    /* Border colors */
+    /* Subtle borders — always safe to invert */
     .border-ink-100 {
-      border-color: hsl(222 24% 18%);
+      border-color: hsl(222 24% 20%);
     }
     .border-ink-200 {
-      border-color: hsl(222 24% 22%);
-    }
-    .border-ink-700 {
-      border-color: hsl(222 24% 30%);
+      border-color: hsl(222 24% 24%);
     }
 
-    /* Brand soft backgrounds (use brand-500 with low alpha) */
-    .bg-brand-50\/40 {
-      background-color: hsl(var(--brand-500) / 0.12);
-    }
-    .bg-brand-50\/30 {
-      background-color: hsl(var(--brand-500) / 0.1);
-    }
-    .bg-brand-100\/40 {
-      background-color: hsl(var(--brand-500) / 0.2);
-    }
-    .bg-brand-100\/60 {
-      background-color: hsl(var(--brand-500) / 0.25);
-    }
-    .bg-brand-200\/40 {
-      background-color: hsl(var(--brand-500) / 0.3);
-    }
-    .bg-brand-200\/30 {
-      background-color: hsl(var(--brand-500) / 0.22);
-    }
-
-    /* Inputs / form */
+    /* Form fields — always dark in dark mode */
     input,
     textarea,
     select {
-      background-color: hsl(222 24% 12%);
+      background-color: hsl(222 24% 14%);
       color: hsl(0 0% 96%);
     }
     input::placeholder,
@@ -305,17 +234,7 @@
       color: hsl(0 0% 55%);
     }
 
-    /* TopBar uses brand-700 — in dark mode push it darker */
-    .bg-brand-700 {
-      background-color: hsl(222 24% 12%);
-    }
-
-    /* Footer uses ink-950 — keep dark but harmonize */
-    .bg-ink-950 {
-      background-color: hsl(222 28% 5%);
-    }
-
-    /* Soft / elevated shadows */
+    /* Stronger shadows on dark surfaces */
     .shadow-soft {
       box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
     }
@@ -360,17 +279,8 @@
 
   [data-theme-mode='dark'] .gradient-bg {
     background:
-      radial-gradient(ellipse at top, hsl(var(--brand-500) / 0.12), transparent 50%),
-      radial-gradient(ellipse at bottom right, hsl(38 92% 50% / 0.08), transparent 50%);
-  }
-
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/40;
-  }
-
-  [data-theme-mode='dark'] .glass-card {
-    background-color: hsl(var(--card) / 0.7);
-    border-color: hsl(222 24% 22%);
+      radial-gradient(ellipse at top, hsl(var(--brand-500) / 0.1), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(38 92% 50% / 0.06), transparent 50%);
   }
 }
 

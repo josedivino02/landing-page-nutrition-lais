@@ -11,14 +11,14 @@ export function BeforeAfterSection() {
   const t = useTranslations('before-after');
 
   return (
-    <section id="antes-e-depois" className="section bg-white" aria-label="Resultados de antes e depois">
+    <section id="antes-e-depois" className="section bg-white dark:bg-ink-950" aria-label="Resultados de antes e depois">
       <div className="container-wide">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {BEFORE_AFTER.map((item, idx) => (
             <FadeIn key={item.key} delay={idx * 0.08} className="group">
-              <article className="rounded-2xl bg-white border border-ink-100 overflow-hidden shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
+              <article className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 overflow-hidden shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
                 <div className="relative">
                   <ImagePlaceholder variant="square" theme="primary" />
                   <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-ink-800 shadow-soft">

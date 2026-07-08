@@ -25,7 +25,7 @@ export function PlansSection() {
                   'border transition-all duration-300 hover:-translate-y-1',
                   plan.highlight
                     ? 'bg-gradient-to-br from-brand-500 to-brand-700 text-white border-transparent shadow-elevated hover:shadow-2xl'
-                    : 'bg-white border-ink-100 shadow-soft hover:shadow-elevated',
+                    : 'bg-white dark:bg-ink-800 border-ink-100 dark:border-ink-700 shadow-soft hover:shadow-elevated',
                 )}
               >
                 {plan.highlight && (

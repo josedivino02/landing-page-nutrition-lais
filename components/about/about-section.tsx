@@ -27,11 +27,11 @@ export function AboutSection() {
               <ImagePlaceholder variant="portrait" theme="gold" label="Foto profissional" />
             </div>
 
-            <div className="absolute -right-4 -bottom-4 sm:-right-6 sm:-bottom-6 bg-white rounded-2xl shadow-elevated p-4 sm:p-5 border border-ink-100 max-w-[220px]">
-              <div className="font-display text-2xl font-bold text-brand-600">
+            <div className="absolute -right-4 -bottom-4 sm:-right-6 sm:-bottom-6 bg-white dark:bg-ink-800 rounded-2xl shadow-elevated p-4 sm:p-5 border border-ink-100 dark:border-ink-700 max-w-[220px]">
+              <div className="font-display text-2xl font-bold text-brand-600 dark:text-brand-400">
                 <Counter value={PROFESSIONAL.rating} suffix="/5" decimals={1} />
               </div>
-              <div className="text-xs text-ink-500 mt-1">
+              <div className="text-xs text-ink-500 dark:text-ink-400 mt-1">
                 {t('rating-label', { count: PROFESSIONAL.ratingCount })}
               </div>
             </div>
@@ -62,12 +62,12 @@ export function AboutSection() {
             {highlights.map((item) => (
               <li
                 key={item.key}
-                className="flex items-center gap-3 rounded-xl bg-white border border-ink-100 px-4 py-3 shadow-soft hover:shadow-elevated hover:-translate-y-0.5 transition-all"
+                className="flex items-center gap-3 rounded-xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 px-4 py-3 shadow-soft hover:shadow-elevated hover:-translate-y-0.5 transition-all"
               >
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-600">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-600 dark:text-brand-300">
                   <item.icon className="h-4 w-4" aria-hidden="true" />
                 </div>
-                <span className="text-sm font-medium text-ink-800">{t(`highlights.${item.key}`)}</span>
+                <span className="text-sm font-medium text-ink-800 dark:text-ink-200">{t(`highlights.${item.key}`)}</span>
               </li>
             ))}
           </ul>

@@ -34,7 +34,7 @@ export function ServicesSection() {
   const t = useTranslations('services');
 
   return (
-    <section id="servicos" className="section bg-brand-50/40" aria-label="Serviços oferecidos">
+    <section id="servicos" className="section bg-brand-50/40 dark:bg-ink-900" aria-label="Serviços oferecidos">
       <div className="container-wide">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
@@ -43,9 +43,9 @@ export function ServicesSection() {
             const Icon = iconMap[service.icon] || Stethoscope;
             return (
               <FadeIn key={service.key} delay={idx * 0.04} className="group relative">
-                <article className="h-full rounded-2xl bg-white border border-ink-100 p-6 sm:p-7 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
+                <article className="h-full rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-6 sm:p-7 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-600 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                    <div className="shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-600 dark:text-brand-300 group-hover:bg-brand-500 group-hover:text-white dark:group-hover:bg-brand-500 transition-colors">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div className="flex-1">

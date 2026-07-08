@@ -19,7 +19,7 @@ export function DifferentialsSection() {
   return (
     <section
       id="diferenciais"
-      className="section bg-gradient-to-b from-white via-brand-50/30 to-white"
+      className="section bg-gradient-to-b from-white via-brand-50/30 to-white dark:from-ink-950 dark:via-ink-900 dark:to-ink-950"
       aria-label="Diferenciais do atendimento"
     >
       <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -59,9 +59,9 @@ export function DifferentialsSection() {
           {featureBlocks.map((block) => (
             <div
               key={block.key}
-              className="rounded-2xl bg-white border border-ink-100 p-6 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
+              className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-6 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100 dark:bg-gold-900/40 text-gold-600 dark:text-gold-400">
                 <block.icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 className="mt-5 font-display text-lg font-semibold text-ink-900 leading-snug">

@@ -16,13 +16,13 @@ export function HeroSection() {
   return (
     <section
       id="topo"
-      className="relative overflow-hidden bg-gradient-to-b from-brand-50/40 via-white to-white"
+      className="relative overflow-hidden bg-gradient-to-b from-brand-50/40 via-white to-white dark:from-brand-900/20 dark:via-ink-950 dark:to-ink-950"
       aria-label="Apresentação"
     >
       {/* Decorative blobs */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl" />
-        <div className="absolute top-40 right-0 h-96 w-96 rounded-full bg-gold-200/30 blur-3xl" />
+        <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-brand-200/40 dark:bg-brand-700/20 blur-3xl" />
+        <div className="absolute top-40 right-0 h-96 w-96 rounded-full bg-gold-200/30 dark:bg-gold-700/10 blur-3xl" />
       </div>
 
       <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-12 sm:py-16 lg:py-24">
@@ -32,10 +32,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm border border-brand-200 px-4 py-1.5 mb-6 shadow-soft"
+            className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-ink-800/80 backdrop-blur-sm border border-brand-200 dark:border-brand-700 px-4 py-1.5 mb-6 shadow-soft"
           >
             <Sparkles className="h-3.5 w-3.5 text-gold-500" aria-hidden="true" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-brand-700">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-700 dark:text-brand-300">
               {t('eyebrow')}
             </span>
           </motion.div>
@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-ink-900 text-balance"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-ink-900 dark:text-white text-balance"
           >
             {t('title-1')}{' '}
             <span className="gradient-text">{t('title-highlight')}</span>{' '}
@@ -55,7 +55,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 text-base sm:text-lg text-ink-600 leading-relaxed max-w-xl text-pretty"
+            className="mt-6 text-base sm:text-lg text-ink-600 dark:text-ink-300 leading-relaxed max-w-xl text-pretty"
           >
             {t('subtitle')}
           </motion.p>
@@ -64,11 +64,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-ink-700"
+            className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-ink-700 dark:text-ink-300"
           >
             {[t('benefits.plan'), t('benefits.human'), t('benefits.support')].map((item) => (
               <li key={item} className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-500" aria-hidden="true" />
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-500 dark:text-brand-400" aria-hidden="true" />
                 <span>{item}</span>
               </li>
             ))}
@@ -108,20 +108,20 @@ export function HeroSection() {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-gold-400 text-gold-400" aria-hidden="true" />
+                  <Star key={i} className="h-4 w-4 fill-gold-400 text-gold-400 dark:fill-gold-300 dark:text-gold-300" aria-hidden="true" />
                 ))}
               </div>
-              <div className="mt-1 text-sm font-medium text-ink-800">
+              <div className="mt-1 text-sm font-medium text-ink-800 dark:text-ink-200">
                 {PROFESSIONAL.rating}/5{' '}
-                <span className="text-ink-500 font-normal">
+                <span className="text-ink-500 dark:text-ink-400 font-normal">
                   ({PROFESSIONAL.ratingCount} {t('rating-prefix')})
                 </span>
               </div>
             </div>
-            <div className="hidden sm:block h-10 w-px bg-ink-200" />
+            <div className="hidden sm:block h-10 w-px bg-ink-200 dark:bg-ink-700" />
             <div className="hidden sm:flex items-center gap-2">
-              <Award className="h-5 w-5 text-brand-500" aria-hidden="true" />
-              <span className="text-sm text-ink-700">{PROFESSIONAL.crn}</span>
+              <Award className="h-5 w-5 text-brand-500 dark:text-brand-400" aria-hidden="true" />
+              <span className="text-sm text-ink-700 dark:text-ink-300">{PROFESSIONAL.crn}</span>
             </div>
           </motion.div>
         </div>
@@ -134,8 +134,8 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-[4/5] sm:aspect-[5/6] w-full max-w-md lg:max-w-none mx-auto"
           >
-            <div className="absolute -inset-3 sm:-inset-4 rounded-[2rem] bg-gradient-to-br from-brand-200 via-brand-100 to-gold-200/40 -z-10" />
-            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 h-32 w-32 sm:h-48 sm:w-48 rounded-full bg-brand-200/50 -z-10 blur-2xl" />
+            <div className="absolute -inset-3 sm:-inset-4 rounded-[2rem] bg-gradient-to-br from-brand-200 via-brand-100 to-gold-200/40 dark:from-brand-700/40 dark:via-brand-800/40 dark:to-gold-700/30 -z-10" />
+            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 h-32 w-32 sm:h-48 sm:w-48 rounded-full bg-brand-200/50 dark:bg-brand-700/30 -z-10 blur-2xl" />
 
             <div className="relative h-full w-full shadow-elevated rounded-[1.75rem]">
               <ImagePlaceholder variant="portrait" theme="primary" label="Foto da nutricionista" />
@@ -145,15 +145,15 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="absolute -left-4 sm:-left-8 top-12 bg-white rounded-2xl shadow-elevated p-3 sm:p-4 border border-ink-100"
+              className="absolute -left-4 sm:-left-8 top-12 bg-white dark:bg-ink-800 rounded-2xl shadow-elevated p-3 sm:p-4 border border-ink-100 dark:border-ink-700"
             >
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-brand-100 flex items-center justify-center">
-                  <CheckCircle2 className="h-5 w-5 text-brand-600" aria-hidden="true" />
+                <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
+                  <CheckCircle2 className="h-5 w-5 text-brand-600 dark:text-brand-300" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-xs text-ink-500">{t('floating.patients-label')}</div>
-                  <div className="font-bold text-ink-900">
+                  <div className="text-xs text-ink-500 dark:text-ink-400">{t('floating.patients-label')}</div>
+                  <div className="font-bold text-ink-900 dark:text-white">
                     <Counter value={2000} suffix="+" duration={2.5} />
                   </div>
                 </div>
@@ -164,15 +164,15 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="absolute -right-2 sm:-right-6 bottom-16 bg-white rounded-2xl shadow-elevated p-3 sm:p-4 border border-ink-100"
+              className="absolute -right-2 sm:-right-6 bottom-16 bg-white dark:bg-ink-800 rounded-2xl shadow-elevated p-3 sm:p-4 border border-ink-100 dark:border-ink-700"
             >
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gold-100 flex items-center justify-center">
-                  <Star className="h-5 w-5 fill-gold-500 text-gold-500" aria-hidden="true" />
+                <div className="h-10 w-10 rounded-full bg-gold-100 dark:bg-gold-900/40 flex items-center justify-center">
+                  <Star className="h-5 w-5 fill-gold-500 text-gold-500 dark:fill-gold-400 dark:text-gold-400" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-xs text-ink-500">{t('floating.rating-label')}</div>
-                  <div className="font-bold text-ink-900">
+                  <div className="text-xs text-ink-500 dark:text-ink-400">{t('floating.rating-label')}</div>
+                  <div className="font-bold text-ink-900 dark:text-white">
                     <Counter value={4.9} suffix="/5" decimals={1} />
                   </div>
                 </div>
@@ -183,8 +183,8 @@ export function HeroSection() {
       </div>
 
       {/* Stats bar */}
-      <div className="border-t border-ink-100 bg-white">
-        <div className="container-wide grid grid-cols-3 divide-x divide-ink-100">
+      <div className="border-t border-ink-100 dark:border-ink-800 bg-white dark:bg-ink-900">
+        <div className="container-wide grid grid-cols-3 divide-x divide-ink-100 dark:divide-ink-800">
           {HERO_STATS.map((stat, idx) => (
             <motion.div
               key={stat.key}
@@ -194,14 +194,14 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="py-6 sm:py-8 text-center"
             >
-              <div className="font-display text-3xl sm:text-4xl font-bold text-brand-600">
+              <div className="font-display text-3xl sm:text-4xl font-bold text-brand-600 dark:text-brand-400">
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
                   decimals={stat.decimals}
                 />
               </div>
-              <div className="mt-1 text-xs sm:text-sm text-ink-500 font-medium">
+              <div className="mt-1 text-xs sm:text-sm text-ink-500 dark:text-ink-400 font-medium">
                 {t(`stats.${stat.key}`)}
               </div>
             </motion.div>

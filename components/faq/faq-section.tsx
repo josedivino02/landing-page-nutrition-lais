@@ -15,7 +15,7 @@ export function FaqSection() {
   const t = useTranslations('faq');
 
   return (
-    <section id="faq" className="section bg-white" aria-label="Perguntas frequentes">
+    <section id="faq" className="section bg-white dark:bg-ink-950" aria-label="Perguntas frequentes">
       <div className="container-tight max-w-3xl">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 

@@ -39,7 +39,7 @@ export function WhatsAppButton() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="relative max-w-[260px] rounded-2xl bg-white shadow-elevated border border-ink-100 p-4 pr-8"
+            className="relative max-w-[260px] rounded-2xl bg-white dark:bg-ink-800 shadow-elevated border border-ink-100 dark:border-ink-700 p-4 pr-8"
           >
             <button
               type="button"
@@ -59,7 +59,7 @@ export function WhatsAppButton() {
               {t('tooltip-cta')}
             </a>
             <span
-              className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-r border-b border-ink-100"
+              className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white dark:bg-ink-800 border-r border-b border-ink-100 dark:border-ink-700"
               aria-hidden="true"
             />
           </motion.div>

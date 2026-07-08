@@ -11,7 +11,7 @@ export function TrustBadges() {
   const t = useTranslations('trust');
 
   return (
-    <section aria-label="Selos de confiança" className="border-y border-ink-100 bg-white">
+    <section aria-label="Selos de confiança" className="border-y border-ink-100 dark:border-ink-800 bg-white dark:bg-ink-900">
       <div className="container-wide py-10">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
           {TRUST_BADGES.map((badge, idx) => {

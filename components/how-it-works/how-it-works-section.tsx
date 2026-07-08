@@ -12,7 +12,7 @@ export function HowItWorksSection() {
   const t = useTranslations('how-it-works');
 
   return (
-    <section id="como-funciona" className="section bg-white" aria-label="Como funciona o atendimento">
+    <section id="como-funciona" className="section bg-white dark:bg-ink-950" aria-label="Como funciona o atendimento">
       <div className="container-wide">
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
