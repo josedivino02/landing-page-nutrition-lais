@@ -1,11 +1,13 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  darkMode: ['class'],
+  darkMode: ['class', '[data-theme-mode="dark"]'],
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './lib/**/*.{ts,tsx}',
+    './i18n/**/*.{ts,tsx}',
+    './messages/**/*.json',
   ],
   theme: {
     container: {
@@ -55,17 +57,17 @@ const config: Config = {
           foreground: 'hsl(var(--card-foreground))',
         },
         brand: {
-          50: '#f0faf2',
-          100: '#dcf2df',
-          200: '#bce4c4',
-          300: '#8ed09c',
-          400: '#5fb872',
-          500: '#3FA34D',
-          600: '#2f8440',
-          700: '#286936',
-          800: '#23532e',
-          900: '#1d4427',
-          950: '#0c2415',
+          50: 'hsl(var(--brand-50) / <alpha-value>)',
+          100: 'hsl(var(--brand-100) / <alpha-value>)',
+          200: 'hsl(var(--brand-200) / <alpha-value>)',
+          300: 'hsl(var(--brand-300) / <alpha-value>)',
+          400: 'hsl(var(--brand-400) / <alpha-value>)',
+          500: 'hsl(var(--brand-500) / <alpha-value>)',
+          600: 'hsl(var(--brand-600) / <alpha-value>)',
+          700: 'hsl(var(--brand-700) / <alpha-value>)',
+          800: 'hsl(var(--brand-800) / <alpha-value>)',
+          900: 'hsl(var(--brand-900) / <alpha-value>)',
+          950: 'hsl(var(--brand-950) / <alpha-value>)',
         },
         gold: {
           50: '#fdf9ed',

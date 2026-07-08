@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ===========================
+     Default = Verde Natural (Light)
+     =========================== */
+  :root,
+  [data-theme='verde'] {
+    --background: 0 0% 100%;
+    --foreground: 222 24% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 24% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 24% 12%;
+    --primary: 124 47% 37%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 24% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 38 92% 47%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 124 47% 37%;
+    --radius: 1rem;
+
+    --brand-50: 124 60% 97%;
+    --brand-100: 124 55% 92%;
+    --brand-200: 124 50% 84%;
+    --brand-300: 124 45% 73%;
+    --brand-400: 124 45% 56%;
+    --brand-500: 124 47% 37%;
+    --brand-600: 124 50% 32%;
+    --brand-700: 124 50% 27%;
+    --brand-800: 124 45% 22%;
+    --brand-900: 124 50% 17%;
+    --brand-950: 124 60% 8%;
+  }
+
+  /* ===========================
+     Theme: Azul Trust (Light)
+     =========================== */
+  [data-theme='azul'] {
+    --primary: 221 83% 53%;
+    --ring: 221 83% 53%;
+
+    --brand-50: 214 100% 97%;
+    --brand-100: 214 95% 93%;
+    --brand-200: 213 97% 87%;
+    --brand-300: 212 96% 78%;
+    --brand-400: 213 94% 68%;
+    --brand-500: 217 91% 60%;
+    --brand-600: 221 83% 53%;
+    --brand-700: 224 76% 48%;
+    --brand-800: 226 71% 40%;
+    --brand-900: 224 64% 33%;
+    --brand-950: 226 57% 21%;
+  }
+
+  /* ===========================
+     Theme: Cinza Premium (Light)
+     =========================== */
+  [data-theme='cinza'] {
+    --primary: 215 25% 27%;
+    --ring: 215 25% 27%;
+
+    --brand-50: 210 20% 98%;
+    --brand-100: 220 14% 96%;
+    --brand-200: 220 13% 91%;
+    --brand-300: 216 12% 84%;
+    --brand-400: 218 11% 65%;
+    --brand-500: 215 16% 47%;
+    --brand-600: 215 19% 35%;
+    --brand-700: 215 25% 27%;
+    --brand-800: 215 28% 17%;
+    --brand-900: 221 39% 11%;
+    --brand-950: 224 71% 4%;
+  }
+
+  /* ===============================================
+     Dark Mode (independent of palette)
+     =============================================== */
+  [data-theme-mode='dark'] {
+    --background: 222 24% 7%;
+    --foreground: 0 0% 96%;
+    --card: 222 24% 11%;
+    --card-foreground: 0 0% 96%;
+    --popover: 222 24% 11%;
+    --popover-foreground: 0 0% 96%;
+    --primary-foreground: 222 24% 8%;
+    --secondary: 222 24% 16%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 222 24% 16%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 222 24% 8%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 24% 20%;
+    --input: 222 24% 14%;
+    --ring: 124 55% 60%;
+
+    /* Brand brighter for contrast on dark */
+    --brand-50: 124 30% 18%;
+    --brand-100: 124 35% 22%;
+    --brand-200: 124 40% 28%;
+    --brand-300: 124 45% 40%;
+    --brand-400: 124 50% 55%;
+    --brand-500: 124 55% 60%;
+    --brand-600: 124 60% 65%;
+    --brand-700: 124 65% 72%;
+    --brand-800: 124 70% 80%;
+    --brand-900: 124 75% 88%;
+    --brand-950: 124 80% 95%;
+  }
+
+  [data-theme-mode='dark'][data-theme='azul'] {
+    --brand-50: 217 35% 18%;
+    --brand-100: 217 45% 24%;
+    --brand-200: 217 55% 32%;
+    --brand-300: 217 65% 42%;
+    --brand-400: 217 75% 55%;
+    --brand-500: 217 85% 65%;
+    --brand-600: 217 90% 72%;
+    --brand-700: 217 95% 80%;
+    --brand-800: 217 100% 87%;
+    --brand-900: 217 100% 92%;
+    --brand-950: 217 100% 96%;
+  }
+
+  [data-theme-mode='dark'][data-theme='cinza'] {
+    --brand-50: 215 15% 16%;
+    --brand-100: 215 18% 22%;
+    --brand-200: 215 20% 30%;
+    --brand-300: 215 20% 42%;
+    --brand-400: 215 18% 55%;
+    --brand-500: 215 15% 65%;
+    --brand-600: 215 12% 75%;
+    --brand-700: 215 10% 82%;
+    --brand-800: 215 8% 88%;
+    --brand-900: 215 6% 93%;
+    --brand-950: 215 4% 96%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-background;
+  }
+}
+
+/* ===========================================================
+   DARK MODE — minimal, intentional overrides
+   Only invert things that are semantically safe:
+   - Text colors (always flip)
+   - Subtle borders (always flip)
+   - Form inputs (always flip)
+   Do NOT auto-invert bg-* classes (they carry design intent).
+   Components opt in via Tailwind dark: variants.
+   =========================================================== */
+@layer base {
+  [data-theme-mode='dark'] {
+    /* Text colors — always safe to invert */
+    .text-ink-900 {
+      color: hsl(0 0% 96%);
+    }
+    .text-ink-800 {
+      color: hsl(0 0% 90%);
+    }
+    .text-ink-700 {
+      color: hsl(0 0% 80%);
+    }
+    .text-ink-600 {
+      color: hsl(0 0% 70%);
+    }
+    .text-ink-500 {
+      color: hsl(0 0% 60%);
+    }
+    .text-ink-400 {
+      color: hsl(0 0% 50%);
+    }
+    .text-ink-300 {
+      color: hsl(0 0% 45%);
+    }
+    .text-ink-200 {
+      color: hsl(0 0% 38%);
+    }
+    .text-ink-100 {
+      color: hsl(0 0% 32%);
+    }
+
+    /* Subtle borders — always safe to invert */
+    .border-ink-100 {
+      border-color: hsl(222 24% 20%);
+    }
+    .border-ink-200 {
+      border-color: hsl(222 24% 24%);
+    }
+
+    /* Form fields — always dark in dark mode */
+    input,
+    textarea,
+    select {
+      background-color: hsl(222 24% 14%);
+      color: hsl(0 0% 96%);
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: hsl(0 0% 55%);
+    }
+
+    /* Stronger shadows on dark surfaces */
+    .shadow-soft {
+      box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
+    }
+    .shadow-elevated {
+      box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Selection */
+    ::selection {
+      background-color: hsl(var(--brand-500) / 0.4);
+      color: hsl(0 0% 100%);
+    }
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .section-tight {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    background:
+      radial-gradient(ellipse at top, hsl(var(--brand-100) / 0.4), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(38 92% 88% / 0.4), transparent 50%);
+  }
+
+  [data-theme-mode='dark'] .gradient-bg {
+    background:
+      radial-gradient(ellipse at top, hsl(var(--brand-500) / 0.1), transparent 50%),
+      radial-gradient(ellipse at bottom right, hsl(38 92% 50% / 0.06), transparent 50%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

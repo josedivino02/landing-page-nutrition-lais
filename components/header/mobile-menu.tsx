@@ -2,9 +2,10 @@
 
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { NAV_LINKS } from '@/lib/constants';
+import { SITE } from '@/lib/constants';
 
 interface MobileMenuProps {
   open: boolean;
@@ -12,6 +13,19 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const t = useTranslations('nav');
+
+  const navLinks = [
+    { href: '#sobre', label: t('sobre') },
+    { href: '#beneficios', label: t('beneficios') },
+    { href: '#servicos', label: t('servicos') },
+    { href: '#como-funciona', label: t('como-funciona') },
+    { href: '#depoimentos', label: t('depoimentos') },
+    { href: '#planos', label: t('planos') },
+    { href: '#faq', label: t('faq') },
+    { href: '#contato', label: t('contato') },
+  ];
+
   useEffect(() => {
     const onEsc = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onEsc);
@@ -40,20 +54,20 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             className="fixed right-0 top-0 z-50 h-full w-full max-w-sm bg-white shadow-2xl lg:hidden flex flex-col"
             role="dialog"
             aria-modal="true"
-            aria-label="Menu de navegação"
+            aria-label={t('navigation-menu')}
           >
             <div className="flex items-center justify-between p-6 border-b border-ink-100">
               <div className="flex items-center gap-2">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-600 text-white">
                   <Leaf className="h-4 w-4" aria-hidden="true" />
                 </span>
-                <span className="font-display text-base font-bold text-ink-900">Nutrição Laís</span>
+                <span className="font-display text-base font-bold text-ink-900">{SITE.name}</span>
               </div>
             </div>
 
-            <nav className="flex-1 overflow-y-auto p-6" aria-label="Navegação mobile">
+            <nav className="flex-1 overflow-y-auto p-6" aria-label={t('navigation-menu')}>
               <ul className="flex flex-col gap-1">
-                {NAV_LINKS.map((link, idx) => (
+                {navLinks.map((link, idx) => (
                   <motion.li
                     key={link.href}
                     initial={{ opacity: 0, x: 16 }}
@@ -75,10 +89,10 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
 
             <div className="p-6 border-t border-ink-100 space-y-3">
               <Button asChild variant="default" size="lg" className="w-full">
-                <a href="#contato" onClick={onClose}>Agendar consulta</a>
+                <a href="#contato" onClick={onClose}>{t('agendar')}</a>
               </Button>
               <Button asChild variant="whatsapp" size="lg" className="w-full">
-                <a href="#contato" onClick={onClose}>Falar no WhatsApp</a>
+                <a href="#contato" onClick={onClose}>{t('whatsapp')}</a>
               </Button>
             </div>
           </motion.div>

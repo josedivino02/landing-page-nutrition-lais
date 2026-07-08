@@ -1,28 +1,22 @@
 'use client';
 
-import { Calendar, ClipboardCheck, ChefHat, TrendingUp } from 'lucide-react';
+import { Calendar, ClipboardCheck, ChefHat, TrendingUp, type LucideIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { STEPS } from '@/lib/constants';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { FadeIn } from '@/components/animations/fade-in';
 
-const stepIcons = [Calendar, ClipboardCheck, ChefHat, TrendingUp];
+const stepIcons: LucideIcon[] = [Calendar, ClipboardCheck, ChefHat, TrendingUp];
 
 export function HowItWorksSection() {
+  const t = useTranslations('how-it-works');
+
   return (
-    <section
-      id="como-funciona"
-      className="section bg-white"
-      aria-label="Como funciona o atendimento"
-    >
+    <section id="como-funciona" className="section bg-white dark:bg-ink-950" aria-label="Como funciona o atendimento">
       <div className="container-wide">
-        <SectionHeading
-          eyebrow="Como funciona"
-          title="Em 4 passos simples você começa a se transformar"
-          subtitle="Um processo claro, do agendamento ao acompanhamento contínuo dos seus resultados."
-        />
+        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
         <div className="relative">
-          {/* Linha conectora (desktop) */}
           <div
             className="hidden lg:block absolute top-14 left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200"
             aria-hidden="true"
@@ -32,11 +26,7 @@ export function HowItWorksSection() {
             {STEPS.map((step, idx) => {
               const Icon = stepIcons[idx] || Calendar;
               return (
-                <FadeIn
-                  key={step.number}
-                  delay={idx * 0.1}
-                  className="relative text-center lg:text-left"
-                >
+                <FadeIn key={step.key} delay={idx * 0.1} className="relative text-center lg:text-left">
                   <div className="inline-flex lg:flex items-center lg:items-start gap-4 lg:gap-0 lg:flex-col">
                     <div className="relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-soft lg:mb-5">
                       <Icon className="h-6 w-6" aria-hidden="true" />
@@ -46,13 +36,13 @@ export function HowItWorksSection() {
                     </div>
                     <div className="text-left">
                       <div className="font-display text-xs font-bold uppercase tracking-wider text-brand-600">
-                        Passo {step.number}
+                        {t('step-prefix')} {step.number}
                       </div>
                       <h3 className="mt-1 font-display text-lg sm:text-xl font-semibold text-ink-900">
-                        {step.title}
+                        {t(`steps.${step.key}.title`)}
                       </h3>
                       <p className="mt-2 text-sm text-ink-600 leading-relaxed text-pretty lg:max-w-[220px]">
-                        {step.description}
+                        {t(`steps.${step.key}.description`)}
                       </p>
                     </div>
                   </div>
