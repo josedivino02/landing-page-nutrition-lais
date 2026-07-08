@@ -57,15 +57,17 @@ export function Navbar() {
           {/* Logo */}
           <a
             href="#topo"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-3 group shrink-0"
             aria-label={`${SITE.name} — Home`}
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-soft transition-transform group-hover:scale-105">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-soft transition-transform group-hover:scale-105">
               <Leaf className="h-5 w-5" aria-hidden="true" />
             </span>
-            <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-display text-lg font-bold text-ink-900">{SITE.name}</span>
-              <span className="text-[10px] uppercase tracking-wider text-brand-600 font-medium">
+            <span className="hidden sm:flex flex-col leading-tight whitespace-nowrap pr-2">
+              <span className="font-display text-lg lg:text-xl font-bold text-ink-900">
+                {SITE.name}
+              </span>
+              <span className="text-[10px] uppercase tracking-wider text-brand-600 font-medium mt-0.5">
                 {t('brand-subtitle')}
               </span>
             </span>

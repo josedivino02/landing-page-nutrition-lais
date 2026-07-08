@@ -1,7 +1,13 @@
 'use client';
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
-import { DEFAULT_THEME, STORAGE_KEY_THEME, isThemeId, type ThemeId } from '@/lib/themes';
+import {
+  DEFAULT_THEME,
+  STORAGE_KEY_THEME,
+  applyThemeFavicon,
+  isThemeId,
+  type ThemeId,
+} from '@/lib/themes';
 
 type ThemeMode = 'light' | 'dark';
 
@@ -15,7 +21,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 /**
- * Inline script to apply theme before paint to prevent FOUC.
+ * Inline script to apply theme + favicon before paint to prevent FOUC.
  * Mounted via dangerouslySetInnerHTML in <head>.
  */
 export const THEME_INIT_SCRIPT = `
@@ -25,6 +31,14 @@ export const THEME_INIT_SCRIPT = `
     var valid = ['verde', 'azul', 'cinza'];
     if (!theme || valid.indexOf(theme) === -1) theme = 'verde';
     document.documentElement.setAttribute('data-theme', theme);
+
+    var colors = { verde: '#3FA34D', azul: '#2563EB', cinza: '#475569' };
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><rect width="64" height="64" rx="16" fill="' + colors[theme] + '"/><path d="M32 14c-7 0-12 4.5-12 11 0 4 2 7 4 9l-2 8 8-4c1 0.3 2 0.5 2 0.5s1-0.2 2-0.5c7-2 12-7 12-13 0-6.5-5-11-12-11z" fill="#fff"/></svg>';
+    var href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+    var links = document.querySelectorAll("link[rel*='icon']");
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute('href', href);
+    }
   } catch (e) {
     document.documentElement.setAttribute('data-theme', 'verde');
   }
@@ -42,6 +56,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       if (isThemeId(stored)) {
         setThemeState(stored);
         document.documentElement.setAttribute('data-theme', stored);
+        applyThemeFavicon(stored);
+      } else {
+        applyThemeFavicon(DEFAULT_THEME);
       }
     } catch {
       /* ignore */
@@ -53,6 +70,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     try {
       localStorage.setItem(STORAGE_KEY_THEME, id);
       document.documentElement.setAttribute('data-theme', id);
+      applyThemeFavicon(id);
     } catch {
       /* ignore */
     }
