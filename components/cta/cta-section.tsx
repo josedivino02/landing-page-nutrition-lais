@@ -51,7 +51,7 @@ export function CtaSection() {
               {t('title')}
             </h2>
 
-            <p className="mt-5 text-base sm:text-lg text-brand-50 leading-relaxed max-w-2xl mx-auto text-pretty">
+            <p className="mt-5 text-base sm:text-lg text-brand-50 dark:text-brand-100 leading-relaxed max-w-2xl mx-auto text-pretty">
               {t('subtitle')}
             </p>
 
@@ -75,7 +75,7 @@ export function CtaSection() {
               </Button>
             </div>
 
-            <p className="mt-6 text-sm text-brand-100">{t('guarantees')}</p>
+            <p className="mt-6 text-sm text-brand-100 dark:text-brand-200">{t('guarantees')}</p>
           </div>
         </motion.div>
       </div>

@@ -47,7 +47,9 @@ export function PlansSection() {
                   <p
                     className={cn(
                       'mt-2 text-sm',
-                      plan.highlight ? 'text-brand-100' : 'text-ink-500',
+                      plan.highlight
+                        ? 'text-white/85 dark:text-brand-100'
+                        : 'text-ink-500 dark:text-ink-400',
                     )}
                   >
                     {t(`items.${plan.key}.description`)}
@@ -67,7 +69,9 @@ export function PlansSection() {
                     <div
                       className={cn(
                         'text-sm font-medium',
-                        plan.highlight ? 'text-brand-100' : 'text-ink-500',
+                        plan.highlight
+                          ? 'text-white/85 dark:text-brand-200'
+                          : 'text-ink-500 dark:text-ink-400',
                       )}
                     >
                       {t(plan.period === 'mensal' ? 'per-month' : 'per-consult')}
@@ -91,7 +95,9 @@ export function PlansSection() {
                         <span
                           className={cn(
                             'text-sm leading-relaxed',
-                            plan.highlight ? 'text-brand-50' : 'text-ink-700',
+                            plan.highlight
+                              ? 'text-white/95 dark:text-brand-50'
+                              : 'text-ink-700 dark:text-ink-300',
                           )}
                         >
                           {feature}
