@@ -4,18 +4,21 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Send, CheckCircle2, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { SectionHeading } from '@/components/ui/section-heading';
-import { contactFormSchema, GOALS, type ContactFormValues } from '@/lib/schema';
+import { contactFormSchema, FORM_GOAL_KEYS, type ContactFormValues } from '@/lib/schema';
 import { FadeIn } from '@/components/animations/fade-in';
 import { CONTACT } from '@/lib/constants';
 import { formatWhatsAppLink } from '@/lib/utils';
 
 export function ContactForm() {
+  const t = useTranslations('form');
+  const tWhatsapp = useTranslations('whatsapp');
   const [submitted, setSubmitted] = useState(false);
   const {
     register,
@@ -35,16 +38,6 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormValues) => {
     // TODO: Integrar com EmailJS, Formspree ou API própria
-    // Por enquanto, apenas simulamos o envio.
-    // Exemplo com fetch para Formspree:
-    // if (process.env.NEXT_PUBLIC_FORMSPREE_ID) {
-    //   await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data),
-    //   });
-    // }
-
     await new Promise((resolve) => setTimeout(resolve, 900));
     console.log('Contact form submission:', data);
     setSubmitted(true);
@@ -53,41 +46,37 @@ export function ContactForm() {
   };
 
   return (
-    <section
-      id="contato"
-      className="section gradient-bg"
-      aria-label="Formulário de contato"
-    >
+    <section id="contato" className="section gradient-bg" aria-label="Formulário de contato">
       <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <FadeIn>
           <SectionHeading
-            eyebrow="Contato"
-            title="Vamos conversar?"
-            subtitle="Preencha o formulário ou entre em contato diretamente pelo WhatsApp."
+            eyebrow={t('eyebrow')}
+            title={t('title')}
+            subtitle={t('subtitle')}
             align="left"
           />
 
           <div className="mt-6 space-y-4">
-            <div className="rounded-2xl bg-white border border-ink-100 p-5 shadow-soft">
-              <div className="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-1">
-                WhatsApp
+            <div className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-5 shadow-soft">
+              <div className="text-sm font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wider mb-1">
+                {t('whatsapp-label')}
               </div>
               <a
-                href={formatWhatsAppLink(CONTACT.whatsapp, 'Olá Laís, gostaria de agendar uma consulta.')}
+                href={formatWhatsAppLink(CONTACT.whatsapp, tWhatsapp('default-message'))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold text-ink-900 hover:text-brand-600 transition-colors"
+                className="text-lg font-semibold text-ink-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
               >
                 {CONTACT.phone}
               </a>
             </div>
-            <div className="rounded-2xl bg-white border border-ink-100 p-5 shadow-soft">
-              <div className="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-1">
-                E-mail
+            <div className="rounded-2xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 p-5 shadow-soft">
+              <div className="text-sm font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wider mb-1">
+                {t('email-label')}
               </div>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="text-lg font-semibold text-ink-900 hover:text-brand-600 transition-colors"
+                className="text-lg font-semibold text-ink-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
               >
                 {CONTACT.email}
               </a>
@@ -96,7 +85,7 @@ export function ContactForm() {
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <div className="rounded-3xl bg-white border border-ink-100 shadow-elevated p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+          <div className="rounded-3xl bg-white dark:bg-ink-800 border border-ink-100 dark:border-ink-700 shadow-elevated p-6 sm:p-8 lg:p-10 relative overflow-hidden">
             <AnimatePresence mode="wait">
               {submitted ? (
                 <motion.div
@@ -113,11 +102,10 @@ export function ContactForm() {
                     <CheckCircle2 className="h-8 w-8" aria-hidden="true" />
                   </div>
                   <h3 className="font-display text-2xl font-bold text-ink-900">
-                    Mensagem enviada!
+                    {t('success-title')}
                   </h3>
                   <p className="mt-2 text-base text-ink-600 max-w-sm text-pretty">
-                    Obrigada pelo contato. Em até 24 horas responderei pelo e-mail ou WhatsApp
-                    informado.
+                    {t('success-desc')}
                   </p>
                 </motion.div>
               ) : (
@@ -132,10 +120,10 @@ export function ContactForm() {
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nome</Label>
+                      <Label htmlFor="name">{t('fields.name')}</Label>
                       <Input
                         id="name"
-                        placeholder="Seu nome completo"
+                        placeholder={t('fields.name-placeholder')}
                         autoComplete="name"
                         aria-invalid={!!errors.name}
                         {...register('name')}
@@ -148,11 +136,11 @@ export function ContactForm() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefone</Label>
+                      <Label htmlFor="phone">{t('fields.phone')}</Label>
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="(11) 99999-9999"
+                        placeholder={t('fields.phone-placeholder')}
                         autoComplete="tel"
                         aria-invalid={!!errors.phone}
                         {...register('phone')}
@@ -166,11 +154,11 @@ export function ContactForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">E-mail</Label>
+                    <Label htmlFor="email">{t('fields.email')}</Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="seuemail@exemplo.com"
+                      placeholder={t('fields.email-placeholder')}
                       autoComplete="email"
                       aria-invalid={!!errors.email}
                       {...register('email')}
@@ -183,17 +171,17 @@ export function ContactForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="goal">Objetivo</Label>
+                    <Label htmlFor="goal">{t('fields.goal')}</Label>
                     <select
                       id="goal"
                       aria-invalid={!!errors.goal}
                       {...register('goal')}
                       className="flex h-12 w-full rounded-xl border border-ink-200 bg-white px-4 py-2 text-sm text-ink-900 transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
                     >
-                      <option value="">Selecione seu objetivo</option>
-                      {GOALS.map((goal) => (
-                        <option key={goal.value} value={goal.value}>
-                          {goal.label}
+                      <option value="">{t('fields.goal-placeholder')}</option>
+                      {FORM_GOAL_KEYS.map((goal) => (
+                        <option key={goal} value={goal}>
+                          {t(`goals.${goal}`)}
                         </option>
                       ))}
                     </select>
@@ -205,10 +193,10 @@ export function ContactForm() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Mensagem</Label>
+                    <Label htmlFor="message">{t('fields.message')}</Label>
                     <Textarea
                       id="message"
-                      placeholder="Conte um pouco sobre seu objetivo..."
+                      placeholder={t('fields.message-placeholder')}
                       aria-invalid={!!errors.message}
                       {...register('message')}
                     />
@@ -228,22 +216,25 @@ export function ContactForm() {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
-                        Enviando...
+                        {t('sending')}
                       </>
                     ) : (
                       <>
                         <Send className="h-5 w-5" aria-hidden="true" />
-                        Enviar mensagem
+                        {t('submit')}
                       </>
                     )}
                   </Button>
 
                   <p className="text-xs text-ink-500 text-center">
-                    Ao enviar, você concorda com nossa{' '}
-                    <a href="#politica-privacidade" className="underline hover:text-brand-600">
-                      Política de Privacidade
+                    {t('consent-start')}{' '}
+                    <a
+                      href="#politica-privacidade"
+                      className="underline hover:text-brand-600"
+                    >
+                      {t('consent-link')}
                     </a>
-                    .
+                    {t('consent-end')}
                   </p>
                 </motion.form>
               )}
