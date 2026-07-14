@@ -18,12 +18,16 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: false,
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
+  fallback: ['Georgia', 'serif'],
+  adjustFontFallback: false,
 });
 
 export const viewport: Viewport = {
