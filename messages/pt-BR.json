@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "title": "Nutrição Laís — Nutricionista | Emagrecimento e Saúde",
+    "description": "Transforme sua alimentação e alcance seus objetivos com acompanhamento nutricional personalizado. Emagrecimento, hipertrofia, reeducação alimentar e nutrição clínica."
+  },
+  "nav": {
+    "sobre": "Sobre",
+    "beneficios": "Benefícios",
+    "servicos": "Serviços",
+    "como-funciona": "Como Funciona",
+    "depoimentos": "Depoimentos",
+    "planos": "Planos",
+    "faq": "FAQ",
+    "contato": "Contato",
+    "agendar": "Agendar Consulta",
+    "whatsapp": "Falar no WhatsApp",
+    "open-menu": "Abrir menu",
+    "close-menu": "Fechar menu",
+    "navigation-menu": "Menu de navegação",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "address": "Endereço",
+    "brand-subtitle": "Saúde & Bem-estar",
+    "agende-cta": "Agende sua consulta"
+  },
+  "hero": {
+    "eyebrow": "Nutrição clínica e esportiva",
+    "title-1": "Transforme sua alimentação e",
+    "title-highlight": "alcance seus objetivos",
+    "title-2": "com acompanhamento personalizado.",
+    "subtitle": "Emagrecimento • Hipertrofia • Reeducação Alimentar • Nutrição Clínica",
+    "benefits": {
+      "plan": "Plano 100% individual",
+      "human": "Atendimento humanizado",
+      "support": "Suporte contínuo"
+    },
+    "schedule": "Agendar Consulta",
+    "whatsapp": "Falar no WhatsApp",
+    "rating-prefix": "Avaliações",
+    "stats": {
+      "experience": "Anos de experiência",
+      "patients": "Pacientes atendidos",
+      "rating": "Avaliação média"
+    },
+    "floating": {
+      "patients-label": "Pacientes",
+      "rating-label": "Avaliação"
+    }
+  },
+  "trust": {
+    "crn": "CRN Ativo",
+    "experience": "Experiência",
+    "patients": "Pacientes atendidos",
+    "rating": "Avaliação média"
+  },
+  "about": {
+    "eyebrow": "Sobre mim",
+    "title": "Olá, eu sou a",
+    "name": "Laís Silva",
+    "p1": "Nutricionista {crn}, com mais de 8 anos de experiência ajudando pessoas a transformarem sua saúde e qualidade de vida através da alimentação. Acredito que comer bem não precisa ser complicado — precisa ser sustentável.",
+    "p2": "Já atendi mais de {patients} com diferentes objetivos — de emagrecimento e ganho de massa muscular até gestantes, idosos e tratamento de doenças metabólicas. Cada plano alimentar é único, ajustado à sua rotina, preferências e necessidades.",
+    "highlights": {
+      "postgrad": "Pós-graduada em Nutrição Clínica",
+      "sports": "Especialista em Nutrição Esportiva",
+      "service": "Atendimento clínico e esportivo"
+    },
+    "rating-label": "Avaliação de {count} pacientes atendidos",
+    "cta-schedule": "Agendar consulta",
+    "cta-services": "Conheça os serviços"
+  },
+  "benefits": {
+    "eyebrow": "Benefícios",
+    "title": "O que você ganha com o acompanhamento",
+    "subtitle": "Plano alimentar, suporte, orientação e tudo que você precisa para alcançar seus objetivos com saúde.",
+    "items": {
+      "plan": {
+        "title": "Plano alimentar personalizado",
+        "description": "Dieta adaptada à sua rotina, preferências e objetivos individuais."
+      },
+      "education": {
+        "title": "Educação alimentar",
+        "description": "Aprenda a fazer escolhas conscientes e mantenha resultados para sempre."
+      },
+      "muscle": {
+        "title": "Ganho de massa muscular",
+        "description": "Estratégias nutricionais para hipertrofia aliada ao seu treino."
+      },
+      "weight": {
+        "title": "Emagrecimento saudável",
+        "description": "Perda de peso sustentável sem dietas restritivas ou efeito sanfona."
+      },
+      "quality": {
+        "title": "Mais qualidade de vida",
+        "description": "Mais energia, disposição e saúde para aproveitar o que importa."
+      },
+      "followup": {
+        "title": "Acompanhamento contínuo",
+        "description": "Suporte próximo com ajustes periódicos para garantir seus resultados."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Serviços",
+    "title": "Soluções para cada objetivo",
+    "subtitle": "Atendo diferentes perfis e necessidades, sempre com plano individualizado e acompanhamento próximo.",
+    "items": {
+      "clinical": {
+        "title": "Nutrição Clínica",
+        "description": "Tratamento nutricional para diabetes, hipertensão, colesterol e doenças metabólicas."
+      },
+      "weight": {
+        "title": "Emagrecimento",
+        "description": "Programa estruturado para perda de peso saudável e duradoura."
+      },
+      "muscle": {
+        "title": "Hipertrofia",
+        "description": "Protocolos para ganho de massa muscular com performance e saúde."
+      },
+      "sports": {
+        "title": "Nutrição Esportiva",
+        "description": "Nutrição específica para atletas amadores e profissionais."
+      },
+      "pregnant": {
+        "title": "Gestantes",
+        "description": "Acompanhamento nutricional seguro e saudável em todas as fases da gestação."
+      },
+      "elderly": {
+        "title": "Idosos",
+        "description": "Cuidado nutricional voltado para longevidade, imunidade e qualidade de vida."
+      },
+      "reeducation": {
+        "title": "Reeducação Alimentar",
+        "description": "Mudança de hábitos alimentares com acompanhamento profissional."
+      },
+      "online": {
+        "title": "Consulta Online",
+        "description": "Atendimento por videochamada com a mesma qualidade do presencial."
+      },
+      "inperson": {
+        "title": "Consulta Presencial",
+        "description": "Atendimento em consultório equipado com toda a estrutura necessária."
+      }
+    },
+    "cta": "Quero saber mais"
+  },
+  "how-it-works": {
+    "eyebrow": "Como funciona",
+    "title": "Em 4 passos simples você começa a se transformar",
+    "subtitle": "Um processo claro, do agendamento ao acompanhamento contínuo dos seus resultados.",
+    "step-prefix": "Passo",
+    "steps": {
+      "schedule": {
+        "title": "Agendamento",
+        "description": "Escolha o melhor dia e horário para sua consulta, presencial ou online."
+      },
+      "assessment": {
+        "title": "Avaliação",
+        "description": "Anamnese completa, avaliação física, bioimpedância e análise de exames."
+      },
+      "plan": {
+        "title": "Plano alimentar",
+        "description": "Você recebe um plano alimentar individualizado, com lista de substituições."
+      },
+      "followup": {
+        "title": "Acompanhamento",
+        "description": "Consultas de retorno periódicas com ajustes e suporte via WhatsApp."
+      }
+    }
+  },
+  "differentials": {
+    "eyebrow": "Diferenciais",
+    "title": "Por que escolher meu atendimento",
+    "subtitle": "Um cuidado individualizado, atualizado e focado em você — do agendamento ao resultado final.",
+    "list": {
+      "1": "Atendimento humanizado e individualizado",
+      "2": "Plano alimentar 100% personalizado",
+      "3": "Suporte via WhatsApp durante todo o acompanhamento",
+      "4": "Avaliação física completa em todas as consultas",
+      "5": "Bioimpedância para acompanhar sua evolução",
+      "6": "Atualização constante baseada em evidências",
+      "7": "Atendimento presencial e online",
+      "8": "Estratégias para diferentes perfis e objetivos"
+    },
+    "cta": "Garantir minha vaga",
+    "blocks": {
+      "evidence": {
+        "title": "Baseado em evidências",
+        "description": "Atualização constante sobre as mais recentes pesquisas em nutrição e metabolismo."
+      },
+      "human": {
+        "title": "Atendimento humanizado",
+        "description": "Você é ouvido(a) com atenção — sem julgamentos e com plano que cabe na sua vida."
+      },
+      "whatsapp": {
+        "title": "Suporte via WhatsApp",
+        "description": "Tire dúvidas entre as consultas para nunca perder o foco no seu objetivo."
+      },
+      "bio": {
+        "title": "Bioimpedância em todas as consultas",
+        "description": "Acompanhe sua composição corporal (massa magra, gordura, água) com precisão."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Depoimentos",
+    "title": "O que dizem meus pacientes",
+    "subtitle": "Mais de 2.000 pessoas já transformaram sua saúde. Conheça algumas histórias.",
+    "items": {
+      "mariana": {
+        "name": "Mariana Souza",
+        "role": "Emagreceu 12kg em 5 meses",
+        "text": "A Laís mudou completamente minha relação com a comida. Perdi 12kg sem passar fome e hoje tenho energia para tudo. O atendimento é incrível!"
+      },
+      "ricardo": {
+        "name": "Ricardo Almeida",
+        "role": "Ganhou 8kg de massa muscular",
+        "text": "Treinava há anos e não conseguia evoluir. Com o plano da Laís, ganhei 8kg de massa magra em 6 meses. Profissional diferenciada."
+      },
+      "camila": {
+        "name": "Camila Ferreira",
+        "role": "Gestação saudável",
+        "text": "Tive uma gestação tranquila e sem inchaço. Laís me acompanhou mês a mês com todo cuidado. Recomendo de olhos fechados!"
+      },
+      "pedro": {
+        "name": "Pedro Henrique",
+        "role": "Tratamento de diabetes",
+        "text": "Minha hemoglobina glicada melhorou muito depois de seguir o plano. Laís é muito atenciosa e explica tudo com clareza."
+      },
+      "beatriz": {
+        "name": "Beatriz Lima",
+        "role": "Reeducação alimentar",
+        "text": "Hoje como de tudo com equilíbrio. Aprendi a ler rótulos e a montar pratos saudáveis. Mudou minha vida!"
+      },
+      "felipe": {
+        "name": "Felipe Costa",
+        "role": "Atleta amador",
+        "text": "Minha performance na corrida melhorou absurdamente. Laís entende do esporte e ajusta tudo com precisão."
+      }
+    }
+  },
+  "before-after": {
+    "eyebrow": "Resultados",
+    "title": "Antes e depois reais",
+    "subtitle": "Cada resultado é fruto de um plano personalizado e de um acompanhamento próximo. Inspire-se.",
+    "items": {
+      "mariana": {
+        "title": "Emagrecimento — Mariana",
+        "description": "Reeducação alimentar com foco em saúde metabólica.",
+        "duration": "5 meses",
+        "result": "-12kg"
+      },
+      "ricardo": {
+        "title": "Hipertrofia — Ricardo",
+        "description": "Protocolo para ganho de massa magra e performance.",
+        "duration": "6 meses",
+        "result": "+8kg massa magra"
+      },
+      "beatriz": {
+        "title": "Reeducação — Beatriz",
+        "description": "Mudança de hábitos e equilíbrio alimentar.",
+        "duration": "4 meses",
+        "result": "Mais disposição"
+      },
+      "camila": {
+        "title": "Gestação — Camila",
+        "description": "Acompanhamento pré e pós-natal.",
+        "duration": "9 meses",
+        "result": "Gestação saudável"
+      }
+    },
+    "disclaimer": "* Resultados podem variar de pessoa para pessoa, dependendo da adesão ao plano e fatores individuais."
+  },
+  "partners": {
+    "eyebrow": "Confiança",
+    "title": "Empresas e academias parceiras",
+    "subtitle": "Acompanho pacientes através de parcerias com clínicas, academias e studios."
+  },
+  "plans": {
+    "eyebrow": "Planos",
+    "title": "Escolha o plano ideal para você",
+    "subtitle": "Todos os planos incluem consulta inicial, plano personalizado e suporte profissional.",
+    "per-month": "por mês",
+    "per-consult": "por consulta",
+    "footer": "Aceitamos cartão de crédito (até 6x sem juros), PIX, boleto e transferência.",
+    "items": {
+      "single": {
+        "name": "Consulta Individual",
+        "description": "Ideal para quem quer começar ou tem um objetivo pontual.",
+        "features": {
+          "1": "Anamnese completa",
+          "2": "Avaliação física + bioimpedância",
+          "3": "Plano alimentar personalizado",
+          "4": "Lista de substituições",
+          "5": "Material de apoio",
+          "6": "Suporte via WhatsApp por 7 dias"
+        },
+        "cta": "Agendar consulta"
+      },
+      "monthly": {
+        "name": "Acompanhamento Mensal",
+        "badge": "Mais escolhido",
+        "description": "O plano mais procurado para resultados consistentes.",
+        "features": {
+          "1": "Tudo da Consulta Individual",
+          "2": "Consultas de retorno semanais",
+          "3": "Ajustes contínuos do plano",
+          "4": "Suporte ilimitado via WhatsApp",
+          "5": "Avaliação física mensal",
+          "6": "Relatórios de evolução",
+          "7": "Receitas exclusivas"
+        },
+        "cta": "Começar agora"
+      },
+      "premium": {
+        "name": "Plano Premium",
+        "description": "Para quem busca performance máxima e resultados rápidos.",
+        "features": {
+          "1": "Tudo do Acompanhamento Mensal",
+          "2": "Atendimento prioritário",
+          "3": "Acesso direto via WhatsApp",
+          "4": "Consultas extras sob demanda",
+          "5": "Análise de exames avançada",
+          "6": "Plano para viagens e eventos",
+          "7": "Suporte familiar incluso"
+        },
+        "cta": "Quero o Premium"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Perguntas frequentes",
+    "subtitle": "Reunimos as dúvidas mais comuns. Se ainda tiver perguntas, é só falar comigo.",
+    "items": {
+      "q1": {
+        "question": "Como funciona a consulta?",
+        "answer": "A primeira consulta tem duração de aproximadamente 60 minutos. Realizamos uma anamnese completa, avaliação física com bioimpedância e, em até 5 dias úteis, você recebe o plano alimentar personalizado em PDF."
+      },
+      "q2": {
+        "question": "Quanto tempo dura o acompanhamento?",
+        "answer": "O tempo varia de acordo com seu objetivo. Em média, recomendamos no mínimo 3 meses para obter resultados consistentes. Muitos pacientes optam por continuar o acompanhamento por 6 a 12 meses."
+      },
+      "q3": {
+        "question": "Vocês aceitam convênio?",
+        "answer": "Não trabalhamos diretamente com convênios, mas emitimos recibo para reembolso. Consulte seu plano de saúde sobre cobertura para consultas com nutricionista."
+      },
+      "q4": {
+        "question": "Como funciona a consulta online?",
+        "answer": "A consulta online é feita por videochamada (Google Meet ou Zoom), com a mesma duração e qualidade da presencial. Você recebe o plano alimentar em PDF por e-mail após a consulta."
+      },
+      "q5": {
+        "question": "Como é montado o plano alimentar?",
+        "answer": "O plano é 100% personalizado, considerando seus exames, rotina, preferências alimentares, restrições e objetivos. Inclui lista de substituições para você ter flexibilidade no dia a dia."
+      },
+      "q6": {
+        "question": "Quantas consultas de retorno são necessárias?",
+        "answer": "Recomendamos retornos semanais no primeiro mês e quinzenais a partir do segundo mês. Tudo é ajustado de acordo com a sua evolução."
+      },
+      "q7": {
+        "question": "Atendo em quais regiões?",
+        "answer": "O consultório está localizado em São Paulo, com fácil acesso. Para clientes de outras cidades ou estados, oferecemos atendimento 100% online com a mesma qualidade."
+      },
+      "q8": {
+        "question": "Posso parcelar o pagamento?",
+        "answer": "Sim. Aceitamos cartão de crédito (até 6x sem juros), PIX, boleto e transferência bancária."
+      }
+    }
+  },
+  "form": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar?",
+    "subtitle": "Preencha o formulário ou entre em contato diretamente pelo WhatsApp.",
+    "whatsapp-label": "WhatsApp",
+    "email-label": "E-mail",
+    "fields": {
+      "name": "Nome",
+      "name-placeholder": "Seu nome completo",
+      "phone": "Telefone",
+      "phone-placeholder": "(11) 99999-9999",
+      "email": "E-mail",
+      "email-placeholder": "seuemail@exemplo.com",
+      "goal": "Objetivo",
+      "goal-placeholder": "Selecione seu objetivo",
+      "message": "Mensagem",
+      "message-placeholder": "Conte um pouco sobre seu objetivo..."
+    },
+    "goals": {
+      "emagrecimento": "Emagrecimento",
+      "hipertrofia": "Hipertrofia / Ganho de massa",
+      "reeducacao": "Reeducação alimentar",
+      "clinica": "Nutrição clínica",
+      "esportiva": "Nutrição esportiva",
+      "gestante": "Gestante",
+      "idoso": "Idoso",
+      "outro": "Outro"
+    },
+    "submit": "Enviar mensagem",
+    "sending": "Enviando...",
+    "consent-start": "Ao enviar, você concorda com nossa",
+    "consent-link": "Política de Privacidade",
+    "consent-end": ".",
+    "success-title": "Mensagem enviada!",
+    "success-desc": "Obrigada pelo contato. Em até 24 horas responderei pelo e-mail ou WhatsApp informado.",
+    "errors": {
+      "required": "Campo obrigatório"
+    }
+  },
+  "cta": {
+    "eyebrow": "Vagas limitadas desta semana",
+    "title": "Comece hoje sua transformação.",
+    "subtitle": "Dê o primeiro passo para uma vida mais saudável e equilibrada. Agende sua consulta e descubra o que a nutrição pode fazer por você.",
+    "schedule": "Agendar agora",
+    "whatsapp": "Falar no WhatsApp",
+    "guarantees": "✓ Sem compromisso · ✓ Resposta em até 24h · ✓ Primeira consulta com avaliação completa"
+  },
+  "footer": {
+    "tagline": "Nutrição clínica e esportiva com atendimento humanizado, individualizado e baseado em evidências.",
+    "quick-links": "Links rápidos",
+    "services-title": "Atendimento",
+    "contact-title": "Contato",
+    "schedule-label": "Seg–Sex: 8h–19h · Sáb: 8h–13h",
+    "copyright": "© {year} {siteName}. Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "contact-link": "Contato",
+    "map-title": "Mapa de localização",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn"
+  },
+  "whatsapp": {
+    "tooltip": "👋 Olá! Posso te ajudar a agendar sua consulta?",
+    "tooltip-cta": "Falar agora →",
+    "tooltip-close": "Fechar mensagem",
+    "label": "Falar no WhatsApp",
+    "default-message": "Olá Laís, gostaria de agendar uma consulta."
+  },
+  "back-to-top": {
+    "label": "Voltar ao topo"
+  },
+  "not-found": {
+    "title": "Página não encontrada",
+    "description": "Desculpe, não encontramos o que você procurava. Vamos voltar para a página inicial?",
+    "cta": "Voltar ao início"
+  },
+  "theme-switcher": {
+    "label": "Trocar tema de cores",
+    "menu-title": "Escolha um tema",
+    "verde-name": "Verde Natural",
+    "verde-desc": "Fresco, saudável e orgânico — o clássico da nutrição.",
+    "azul-name": "Azul Trust",
+    "azul-desc": "Médico, confiável e profissional — ideal para clínicas.",
+    "cinza-name": "Cinza Premium",
+    "cinza-desc": "Sofisticado, moderno e minimalista — visual de clínica premium."
+  },
+  "locale-switcher": {
+    "label": "Trocar idioma"
+  },
+  "mode-toggle": {
+    "switch-to-light": "Mudar para modo claro",
+    "switch-to-dark": "Mudar para modo escuro"
+  },
+  "footer-services": {
+    "clinical": "Nutrição Clínica",
+    "weight": "Emagrecimento",
+    "muscle": "Hipertrofia",
+    "pregnant": "Gestantes",
+    "online": "Consulta Online"
+  }
+}

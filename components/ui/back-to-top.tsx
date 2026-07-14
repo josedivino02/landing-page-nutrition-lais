@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { ArrowUp } from 'lucide-react';
 
 export function BackToTop() {
+  const t = useTranslations('back-to-top');
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -29,8 +31,8 @@ export function BackToTop() {
           whileTap={{ scale: 0.95 }}
           onClick={handleClick}
           type="button"
-          aria-label="Voltar ao topo"
-          className="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-white text-ink-700 shadow-elevated border border-ink-100 hover:text-brand-600 hover:border-brand-200 transition-colors"
+          aria-label={t('label')}
+          className="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-white dark:bg-ink-800 text-ink-700 dark:text-ink-200 shadow-elevated border border-ink-100 dark:border-ink-700 hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-200 dark:hover:border-brand-600 transition-colors"
         >
           <ArrowUp className="h-5 w-5" aria-hidden="true" />
         </motion.button>
